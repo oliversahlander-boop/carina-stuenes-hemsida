@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f5f3ef;
+  --foreground: #111111;
+  --color-surface: #f8f7f5;
 }
 
 @theme inline {
@@ -12,15 +13,140 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.site-shell {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* warm cream/sand base */
+  background-color: #f4f0e8;
+}
+
+/* Layer 1 – base organic canvas: fixed, covers full viewport */
+.site-shell::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    /* top-left warm ivory light pool */
+    radial-gradient(68% 52% at 8% 6%,  rgba(255, 251, 242, 0.82) 0%, transparent 68%),
+    /* top-right cool sand breath */
+    radial-gradient(55% 44% at 92% 4%,  rgba(226, 216, 199, 0.52) 0%, transparent 64%),
+    /* center airy warmth — gives depth without objects */
+    radial-gradient(72% 58% at 50% 44%, rgba(243, 237, 224, 0.58) 0%, transparent 70%),
+    /* bottom-left grounded warm grey */
+    radial-gradient(50% 46% at 14% 88%, rgba(205, 196, 182, 0.44) 0%, transparent 68%),
+    /* bottom-right soft sandy glow */
+    radial-gradient(54% 48% at 86% 94%, rgba(232, 220, 202, 0.46) 0%, transparent 65%),
+    /* solid warm canvas */
+    linear-gradient(168deg, #f6f2e9 0%, #ede8de 38%, #e8e2d6 68%, #ede8de 100%);
+}
+
+/* Layer 2 – slow breathing organic movement on top of Layer 1 */
+.site-shell::after {
+  content: "";
+  position: fixed;
+  inset: -8%;
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(48px);
+  opacity: 0.55;
+  background:
+    radial-gradient(44% 36% at 24% 22%, rgba(222, 207, 185, 0.45), transparent 72%),
+    radial-gradient(36% 32% at 76% 18%, rgba(240, 230, 212, 0.38), transparent 68%),
+    radial-gradient(42% 38% at 60% 72%, rgba(196, 183, 164, 0.3), transparent 72%),
+    radial-gradient(38% 34% at 18% 74%, rgba(214, 204, 188, 0.36), transparent 68%);
+  animation: organic-drift 40s ease-in-out infinite alternate;
+}
+
+@keyframes organic-drift {
+  0%   { transform: translate3d(0%,    0%,    0) scale(1.00); }
+  25%  { transform: translate3d(0.6%,  -0.4%, 0) scale(1.02); }
+  50%  { transform: translate3d(1.1%,  0.5%,  0) scale(1.03); }
+  75%  { transform: translate3d(0.3%,  1.0%,  0) scale(1.02); }
+  100% { transform: translate3d(-0.8%, 0.2%,  0) scale(1.04); }
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: #111111;
+  color: #f7f6f2;
+  padding: 0.7rem 1.25rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #2a2a2a;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid #d4d0c6;
+  background: #f8f7f5;
+  color: #666666;
+  padding: 0.7rem 1.25rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #f2eee7;
+}
+
+.card {
+  border-radius: 1rem;
+  background: #f8f7f5;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px -16px rgba(30, 24, 16, 0.18);
+}
+
+.btn-light {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: #f8f7f5;
+  color: #111111;
+  padding: 0.7rem 1.25rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-light:hover {
+  background: #e2e2e2;
+}
+
+.hero-fade {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: hero-fade-in 0.7s ease forwards;
+}
+
+@keyframes hero-fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
