@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { CtaBand } from "../components/cta-band";
 import { createPageMetadata } from "../seo";
@@ -12,11 +11,6 @@ const treatmentSections = [
     description:
       "För dig som vill släppa spänningar, minska stress och ge kroppen en trygg återhämtningspaus.",
     items: ["Massage", "Koppning", "Stretch och träningsövningar"],
-    image: {
-      src: "/hero-massage.jpg",
-      alt: "Lugn behandlingsmiljö med fokus på massage",
-      position: "object-[52%_42%]",
-    },
   },
   {
     title: "Holistisk balans",
@@ -24,11 +18,6 @@ const treatmentSections = [
     description:
       "När du behöver en stund där flera metoder får samverka, helt utifrån hur du mår just nu.",
     items: ["Biomagnetism", "Individuellt anpassade behandlingar", "Andningsövningar"],
-    image: {
-      src: "/hero-massage.jpg",
-      alt: "Lugn atmosfär för holistisk behandling",
-      position: "object-[78%_58%]",
-    },
   },
   {
     title: "Närvaro och stillhet",
@@ -36,11 +25,6 @@ const treatmentSections = [
     description:
       "Vi arbetar med lugna verktyg för fokus, andning och återhämtning som du kan ta med dig i vardagen.",
     items: ["Yoga", "Meditation", "Mindfulness"],
-    image: {
-      src: "/hero-massage.jpg",
-      alt: "Mjuk wellness-känsla i naturliga toner",
-      position: "object-[26%_54%]",
-    },
   },
   {
     title: "Hud och helhetsvård",
@@ -48,24 +32,19 @@ const treatmentSections = [
     description:
       "För dig som vill kombinera yttre omsorg med inre återhämtning och mer hållbar vardagsbalans.",
     items: ["Ansiktsbehandlingar", "Kostrådgivning"],
-    image: {
-      src: "/hero-massage.jpg",
-      alt: "Avslappnande spa-liknande känsla i varma neutrala toner",
-      position: "object-[74%_44%]",
-    },
   },
 ];
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Tjänster",
+  title: "Behandlingar & tjänster",
   description:
-    "Utforska massage, biomagnetism, koppning, yoga, mindfulness och fler holistiska tjänster för kropp och sinne.",
+    "Massage, koppning, biomagnetism, yoga, mindfulness och mer. Se alla holistiska behandlingar hos Carina Stuenes i Stockholm och Östersund.",
   path: "/tjanster",
 });
 
 export default function ServicesPage() {
   return (
-    <div className="mx-auto w-full max-w-6xl px-4 pb-16 pt-10 sm:px-6 lg:px-8">
+    <div className="content-shell pb-16 pt-10">
       <section>
         <p className="text-sm uppercase tracking-[0.2em] text-stone-600">Tjänster</p>
         <h1 className="mt-3 text-4xl font-semibold text-stone-900">Behandlingar för balans, styrka och återhämtning</h1>
@@ -78,27 +57,16 @@ export default function ServicesPage() {
         {treatmentSections.map((section, index) => (
           <article
             key={section.title}
-            className="overflow-hidden rounded-3xl bg-[#f8f7f5]/80"
+            className="overflow-hidden"
           >
-            <div className="grid gap-0 md:grid-cols-2">
-              <div className={`relative min-h-[260px] ${index % 2 === 1 ? "md:order-2" : ""}`}>
-                <Image
-                  src={section.image.src}
-                  alt={section.image.alt}
-                  fill
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                  className={`object-cover ${section.image.position}`}
-                />
-                <div className="absolute inset-0 bg-[linear-gradient(145deg,rgba(245,243,239,0.1),rgba(17,17,17,0.12))]" />
-              </div>
-
-              <div className={`p-8 sm:p-10 ${index % 2 === 1 ? "md:order-1" : ""}`}>
+            <div className="grid gap-0">
+              <div className="p-8 sm:p-10">
                 <p className="text-xs uppercase tracking-[0.2em] text-stone-500">Kategori {index + 1}</p>
                 <h2 className="mt-3 text-3xl font-semibold text-stone-900">{section.title}</h2>
                 <p className="mt-4 text-lg text-stone-700">{section.lead}</p>
                 <p className="mt-3 text-base leading-relaxed text-stone-600">{section.description}</p>
 
-                <ul className="mt-6 space-y-3 border-l border-stone-300 pl-4">
+                <ul className="mt-6 space-y-3 border-l border-[rgba(198,164,108,0.35)] pl-4">
                   {section.items.map((item) => (
                     <li key={item}>
                       <p className="font-medium text-stone-900">{item}</p>
@@ -109,7 +77,7 @@ export default function ServicesPage() {
 
                 <Link
                   href={company.bookingUrl}
-                  className="mt-7 inline-flex text-sm font-semibold uppercase tracking-[0.16em] text-[#666] transition-colors hover:text-[#111]"
+                  className="mt-7 inline-flex text-sm font-semibold uppercase tracking-[0.16em] text-[#c6a46c] transition-colors hover:text-[#d4a373]"
                 >
                   Se behandlingar
                 </Link>
@@ -119,7 +87,7 @@ export default function ServicesPage() {
         ))}
       </section>
 
-      <section className="mt-14 rounded-3xl bg-[#f5f2ec] px-8 py-10">
+      <section className="mt-14 py-10">
         <h2 className="text-2xl font-semibold text-stone-900">Mobila tjänster</h2>
         <p className="mt-3 max-w-2xl text-stone-700">
           Det går också att boka mobila upplägg. Carina kan komma ut till företag och grupper när ni vill skapa utrymme för återhämtning direkt på plats.

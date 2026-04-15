@@ -4,9 +4,9 @@ import { createPageMetadata } from "../seo";
 import { faqs } from "../site-data";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "FAQ",
+  title: "Vanliga frågor",
   description:
-    "Vanliga frågor om bokning, behandlingar, mobila tjänster och hur vi anpassar insatser efter individens behov.",
+    "Svar på vanliga frågor om bokning, behandlingar, priser och mobila tjänster hos Carina Stuenes i Stockholm och Östersund.",
   path: "/faq",
 });
 
@@ -25,7 +25,7 @@ const faqJsonLd = {
 
 export default function FaqPage() {
   return (
-    <div className="mx-auto w-full max-w-5xl px-4 pb-16 pt-10 sm:px-6 lg:px-8">
+    <div className="content-shell pb-16 pt-10">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}

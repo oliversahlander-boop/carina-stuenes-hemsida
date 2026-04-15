@@ -18,6 +18,9 @@ export function createPageMetadata({
     title,
     description,
     keywords: seoKeywords,
+    authors: [{ name: "Carina Stuenes", url: siteConfig.siteUrl }],
+    creator: "Carina Stuenes",
+    publisher: "Health Stuenes",
     alternates: {
       canonical: path,
     },
@@ -33,7 +36,7 @@ export function createPageMetadata({
           url: siteConfig.defaultOgImage,
           width: 1200,
           height: 630,
-          alt: "Carina Stuenes - Holistisk hälsa och välmående",
+          alt: "Carina Stuenes – Holistisk hälsa och välmående",
         },
       ],
     },

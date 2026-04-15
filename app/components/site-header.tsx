@@ -1,39 +1,111 @@
-import Link from "next/link";
-import { company } from "../site-data";
+"use client";
 
-const navItems = [
-  { href: "/", label: "Startsida" },
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+
+const navLinks = [
+  { href: "/", label: "Start" },
   { href: "/om-oss", label: "Om oss" },
-  { href: "/tjanster", label: "Tjänster" },
-  { href: "/recensioner", label: "Recensioner" },
   { href: "/faq", label: "FAQ" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
 export function SiteHeader() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-stone-200/50 bg-[color:var(--color-surface)]/90 backdrop-blur">
-      <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="text-lg font-semibold tracking-wide text-stone-900">
-          {company.name}
-        </Link>
+    <header className="sticky top-0 z-50 border-b border-[rgba(198,164,108,0.25)] bg-[color:var(--color-surface)]/96 backdrop-blur">
+      <div className="content-shell py-3 sm:py-4">
+        {/* Mobile */}
+        <div className="flex items-center justify-between md:hidden">
+          <Link
+            href="/"
+            className="flex items-center"
+            onClick={() => setOpen(false)}
+          >
+            <Image
+              src="/HEALTH-transparent.png"
+              alt="Health Stuenes logga"
+              width={220}
+              height={220}
+              priority
+              className="h-7 w-auto object-contain"
+            />
+          </Link>
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={open ? "Stäng meny" : "Öppna meny"}
+            aria-expanded={open}
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(198,164,108,0.3)] text-[#d8ccbb] transition hover:border-[rgba(198,164,108,0.6)] hover:text-[#c6a46c]"
+          >
+            {open ? (
+              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+                <path d="M18 6L6 18M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
 
-        <nav aria-label="Huvudmeny" className="flex flex-wrap items-center gap-2 sm:gap-4">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="rounded-full px-3 py-1 text-sm text-stone-700 transition hover:bg-stone-100 hover:text-stone-900"
-            >
-              {item.label}
+        {/* Desktop */}
+        <div className="hidden items-center justify-center gap-6 md:flex lg:gap-8">
+          <nav aria-label="Vänster meny" className="flex items-center gap-4 lg:gap-6">
+            <Link href="/" className="text-[0.8rem] font-medium uppercase tracking-[0.12em] text-[#d8ccbb] transition hover:text-[#c6a46c]">
+              Start
             </Link>
-          ))}
-        </nav>
+            <Link href="/om-oss" className="text-[0.8rem] font-medium uppercase tracking-[0.12em] text-[#d8ccbb] transition hover:text-[#c6a46c]">
+              Om oss
+            </Link>
+          </nav>
 
-        <a href={company.bookingUrl} className="btn-primary text-sm">
-          Boka tid
-        </a>
+          <Link href="/" className="flex items-center px-2">
+            <Image
+              src="/HEALTH-transparent.png"
+              alt="Health Stuenes logga"
+              width={320}
+              height={320}
+              priority
+              className="h-7 w-auto object-contain lg:h-8"
+            />
+          </Link>
+
+          <nav aria-label="Höger meny" className="flex items-center gap-4 lg:gap-6">
+            <Link href="/faq" className="text-[0.8rem] font-medium uppercase tracking-[0.12em] text-[#d8ccbb] transition hover:text-[#c6a46c]">
+              FAQ
+            </Link>
+            <Link href="/kontakt" className="text-[0.8rem] font-medium uppercase tracking-[0.12em] text-[#d8ccbb] transition hover:text-[#c6a46c]">
+              Kontakt
+            </Link>
+          </nav>
+        </div>
       </div>
+
+      {/* Mobile dropdown */}
+      {open && (
+        <nav
+          aria-label="Mobilmeny"
+          className="border-t border-[rgba(198,164,108,0.18)] bg-[color:var(--color-surface)] md:hidden"
+        >
+          <ul className="content-shell flex flex-col divide-y divide-[rgba(198,164,108,0.1)] py-2">
+            {navLinks.map(({ href, label }) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  onClick={() => setOpen(false)}
+                  className="block py-4 text-sm font-medium uppercase tracking-[0.14em] text-[#d8ccbb] transition hover:text-[#c6a46c]"
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
     </header>
   );
 }

@@ -5,15 +5,15 @@ import { ContactForm } from "./contact-form";
 import { company } from "../site-data";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Kontakt",
+  title: "Kontakt & bokning",
   description:
-    "Kontakta Carina Stuenes för bokning av behandlingar, yoga och mobila hälsotjänster för företag och grupper.",
+    "Boka tid eller skicka en fråga till Carina Stuenes. Holistiska behandlingar i Stockholm och Östersund – även mobilt till företag och grupper.",
   path: "/kontakt",
 });
 
 export default function ContactPage() {
   return (
-    <div className="mx-auto w-full max-w-6xl px-4 pb-16 pt-10 sm:px-6 lg:px-8">
+    <div className="content-shell pb-16 pt-10">
       <section>
         <p className="text-sm uppercase tracking-[0.2em] text-stone-600">Kontakt</p>
         <h1 className="mt-3 text-4xl font-semibold text-stone-900">Boka tid eller skicka en fråga</h1>
@@ -25,11 +25,11 @@ export default function ContactPage() {
       <section className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_1fr]">
         <ContactForm />
 
-        <aside className="rounded-2xl bg-[#f5f2ec] p-6 sm:p-8">
+        <aside className="rounded-2xl bg-[color:var(--color-surface)]/92 p-6 sm:p-8">
           <h2 className="text-xl font-semibold text-stone-900">Kontaktuppgifter</h2>
           <ul className="mt-4 space-y-3 text-stone-700">
             <li>
-              Telefon: <a className="font-medium text-stone-900" href={company.phoneLink}>{company.phone}</a>
+              Telefon: <a className="font-medium text-stone-900" href={company.smsLink}>{company.phone}</a>
             </li>
             <li>
               E-post: <a className="font-medium text-stone-900" href={`mailto:${company.email}`}>{company.email}</a>
@@ -39,7 +39,7 @@ export default function ContactPage() {
             </li>
           </ul>
 
-          <div className="mt-6 rounded-2xl bg-[#ece8e0] p-5">
+          <div className="mt-6 rounded-2xl bg-[rgba(20,15,12,0.5)] p-5">
             <h3 className="font-semibold text-stone-900">Mobila tjänster</h3>
             <p className="mt-2 text-sm text-stone-700">
               Det går också bra att boka behandlingar för företag och grupper på plats hos er.

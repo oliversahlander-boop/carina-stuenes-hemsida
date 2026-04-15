@@ -1,49 +1,60 @@
+import Image from "next/image";
 import Link from "next/link";
 import { company } from "../site-data";
 
 export function SiteFooter() {
   return (
-    <footer className="mt-24 border-t border-stone-200/60 bg-[#f0ede6]">
-      <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-12 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
-        <section>
-          <h2 className="text-base font-semibold text-stone-900">Health Stuenes</h2>
-          <p className="mt-2 text-sm text-stone-600">
-            En lugn plats för behandling, återhämtning och bättre kontakt med kroppen.
-          </p>
+    <footer className="mt-10 border-t border-[rgba(198,164,108,0.22)] bg-[color:var(--background)]">
+      <div className="mx-auto grid w-full max-w-[88rem] gap-x-8 gap-y-8 px-4 py-10 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-10 lg:py-12">
+        <section className="space-y-3 sm:col-span-2 lg:col-span-1">
+          <h2 className="text-xs uppercase tracking-[0.28em] text-[#e3c39c] sm:text-sm">Health Stuenes</h2>
+          <Link
+            href="/"
+            aria-label="Till startsidan"
+            className="inline-flex items-center"
+          >
+            <Image
+              src="/HEALTH-transparent.png"
+              alt="Health Stuenes logga"
+              width={220}
+              height={220}
+              className="h-12 w-auto object-contain sm:h-14"
+            />
+          </Link>
         </section>
 
-        <section>
-          <h2 className="text-base font-semibold text-stone-900">Kontakt</h2>
-          <ul className="mt-2 space-y-2 text-sm text-stone-700">
+        <section className="space-y-3">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.1em] text-[#e3c39c]">Kontakt</h2>
+          <ul className="space-y-2.5 text-sm text-[#b9a58d]">
             <li>
-              <a className="hover:text-stone-900" href={company.phoneLink}>
+              <a className="transition hover:text-[#e3c39c]" href={company.smsLink}>
                 {company.phone}
               </a>
             </li>
             <li>
-              <a className="hover:text-stone-900" href={`mailto:${company.email}`}>
+              <a className="transition hover:text-[#e3c39c]" href={`mailto:${company.email}`}>
                 {company.email}
               </a>
             </li>
             <li>
-              <a className="hover:text-stone-900" href={company.bookingUrl}>
-                Boka tid
+              <a className="font-medium text-[#d4a373] transition hover:text-[#e3c39c]" href={company.bookingUrl}>
+                Boka tid →
               </a>
             </li>
           </ul>
         </section>
 
-        <section>
-          <h2 className="text-base font-semibold text-stone-900">Följ oss</h2>
-          <div className="mt-2">
+        <section className="space-y-3">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.1em] text-[#e3c39c]">Följ oss</h2>
+          <div className="flex flex-col items-start gap-3">
             <a
               href="https://www.facebook.com/people/Health-Stuenes/100063679415604/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Besök Health Stuenes på Facebook"
-              className="inline-flex items-center gap-3 text-sm text-stone-700 transition-colors duration-300 hover:text-stone-900"
+              className="inline-flex w-fit items-center gap-3 text-sm text-[#b9a58d] transition hover:text-[#e3c39c]"
             >
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-stone-200 bg-[#f8f7f5] text-stone-700">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(198,164,108,0.35)] bg-[rgba(20,15,12,0.5)] text-[#f5f1eb]">
                 <svg
                   viewBox="0 0 24 24"
                   className="h-5 w-5"
@@ -55,21 +66,53 @@ export function SiteFooter() {
               </span>
               <span>Facebook</span>
             </a>
+
+            <a
+              href="https://www.instagram.com/miss_csweet/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Besök Health Stuenes på Instagram"
+              className="inline-flex w-fit items-center gap-3 text-sm text-[#b9a58d] transition hover:text-[#e3c39c]"
+            >
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(198,164,108,0.35)] bg-[rgba(20,15,12,0.5)] text-[#f5f1eb]">
+                <svg
+                  viewBox="0 0 24 24"
+                  className="h-5 w-5"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  aria-hidden
+                >
+                  <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+                  <circle cx="12" cy="12" r="4.2" />
+                  <circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none" />
+                </svg>
+              </span>
+              <span>Instagram</span>
+            </a>
           </div>
         </section>
 
-        <section>
-          <h2 className="text-base font-semibold text-stone-900">Platser</h2>
-          <ul className="mt-2 space-y-2 text-sm text-stone-700">
-            <li>Stockholm</li>
-            <li>Östersund</li>
-            <li>
-              <Link className="hover:text-stone-900" href="/kontakt">
-                Kontakt
+        <section className="space-y-3">
+          <h2 className="text-sm font-semibold uppercase tracking-[0.1em] text-[#e3c39c]">Platser</h2>
+          <ul className="space-y-2.5 text-sm text-[#b9a58d]">
+            <li className="leading-relaxed">Olof Dalins väg 6<br />112 52, Stockholm</li>
+            <li className="leading-relaxed">Pastorsgatan 3<br />831 35, Östersund</li>
+            <li className="pt-1">
+              <Link className="font-medium text-[#d4a373] transition hover:text-[#e3c39c]" href="/kontakt">
+                Kontakta oss →
               </Link>
             </li>
           </ul>
         </section>
+      </div>
+
+      <div className="border-t border-[rgba(198,164,108,0.18)]">
+        <div className="mx-auto w-full max-w-[88rem] px-4 py-3 text-center sm:px-6 lg:px-10">
+          <p className="text-xs uppercase tracking-[0.12em] text-[#7a6a58]">
+            Skapad av One Media
+          </p>
+        </div>
       </div>
     </footer>
   );

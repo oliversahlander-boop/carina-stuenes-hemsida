@@ -4,7 +4,8 @@ export const company = {
   email: "stuenesshop@gmail.com",
   phone: "0767402432",
   phoneLink: "tel:+46767402432",
-  bookingUrl: "mailto:stuenesshop@gmail.com?subject=Boka%20tid%20hos%20Carina%20Stuenes",
+  smsLink: "sms:+46767402432?body=Hej!%20Jag%20vill%20boka%20en%20tid.",
+  bookingUrl: "sms:+46767402432?body=Hej!%20Jag%20vill%20boka%20en%20tid.",
 };
 
 export const siteConfig = {
@@ -15,22 +16,47 @@ export const siteConfig = {
 };
 
 export const seoKeywords = [
+  // Behandlingar
   "holistisk hälsa",
   "massage",
+  "massageterapeut",
   "biomagnetism",
   "koppning",
   "yoga",
   "mindfulness",
   "meditation",
-  "livscoachning",
   "kostrådgivning",
+  "andningsövningar",
+  "stretch",
+  "ansiktsbehandling",
+  // Besvär
   "ryggproblem",
   "nackproblem",
   "stresshantering",
   "utbrändhet",
+  "återhämtning",
+  "smärtlindring",
+  "spänningar",
+  // Målgrupper
   "mobil massage företag",
+  "massage för idrottare",
   "wellness",
+  "holistisk terapeut",
+  // Platsspecifikt – Stockholm
+  "massage Stockholm",
+  "holistisk massage Stockholm",
+  "koppning Stockholm",
+  "biomagnetism Stockholm",
+  "yoga Stockholm",
+  "massageterapeut Stockholm",
+  "wellness Stockholm",
+  // Platsspecifikt – Östersund
+  "massage Östersund",
+  "yoga Östersund",
+  "holistisk hälsa Östersund",
+  // Varumärke
   "Carina Stuenes",
+  "Health Stuenes",
 ];
 
 export const services = [

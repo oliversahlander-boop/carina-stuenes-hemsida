@@ -21,6 +21,17 @@ export const metadata: Metadata = {
     default: "Carina Stuenes | Holistisk hälsa och välmående",
     template: "%s | Carina Stuenes",
   },
+  icons: {
+    icon: [
+      {
+        url: "/favicon-health-v3.png?v=4",
+        sizes: "512x512",
+        type: "image/png",
+      },
+    ],
+    shortcut: "/favicon-health-v3.png?v=4",
+    apple: "/apple-touch-icon-health-v3.png?v=4",
+  },
   description:
     "Terapeutiska behandlingar, yoga och mindfulness med holistiskt fokus på kropp och sinne.",
   keywords: seoKeywords,
@@ -67,34 +78,101 @@ export const metadata: Metadata = {
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "HealthAndBeautyBusiness",
-  name: company.name,
+  "@id": `${siteConfig.siteUrl}/#business`,
+  name: "Health Stuenes",
+  alternateName: company.name,
   description:
-    "Terapeutiska behandlingar, yoga och mindfulness med holistiskt fokus på kropp och sinne.",
+    "Holistiska behandlingar i Stockholm och Östersund. Massage, koppning, biomagnetism, yoga och mindfulness anpassat efter dig.",
   url: siteConfig.siteUrl,
   email: company.email,
-  telephone: company.phone,
+  telephone: `+46${company.phone.replace(/^0/, "")}`,
+  priceRange: "$$",
+  image: `${siteConfig.siteUrl}/carina-1.jpeg`,
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Olof Dalins väg 6",
+    postalCode: "112 52",
+    addressLocality: "Stockholm",
+    addressCountry: "SE",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 59.3251,
+    longitude: 18.0425,
+  },
+  location: [
+    {
+      "@type": "Place",
+      name: "Health Stuenes Stockholm",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Olof Dalins väg 6",
+        postalCode: "112 52",
+        addressLocality: "Stockholm",
+        addressCountry: "SE",
+      },
+    },
+    {
+      "@type": "Place",
+      name: "Health Stuenes Östersund",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Pastorsgatan 3",
+        postalCode: "831 35",
+        addressLocality: "Östersund",
+        addressCountry: "SE",
+      },
+    },
+  ],
   contactPoint: [
     {
       "@type": "ContactPoint",
       contactType: "customer service",
-      telephone: company.phone,
+      telephone: `+46${company.phone.replace(/^0/, "")}`,
       email: company.email,
       areaServed: "SE",
       availableLanguage: ["sv"],
     },
   ],
-  areaServed: "SE",
+  areaServed: ["Stockholm", "Östersund", "Sverige"],
+  founder: {
+    "@type": "Person",
+    "@id": `${siteConfig.siteUrl}/#carina`,
+    name: "Carina Stuenes",
+    jobTitle: "Holistisk terapeut",
+    description:
+      "Certifierad massageterapeut och holistisk terapeut med erfarenhet av massage, biomagnetism, koppning och yoga.",
+    url: `${siteConfig.siteUrl}/om-oss`,
+    image: `${siteConfig.siteUrl}/carina-1.jpeg`,
+    worksFor: {
+      "@id": `${siteConfig.siteUrl}/#business`,
+    },
+  },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Tjänster",
-    itemListElement: services.map((service) => ({
+    name: "Behandlingar & tjänster",
+    itemListElement: services.map((service, index) => ({
       "@type": "Offer",
+      position: index + 1,
       itemOffered: {
         "@type": "Service",
         name: service,
+        provider: { "@id": `${siteConfig.siteUrl}/#business` },
       },
     })),
   },
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${siteConfig.siteUrl}/#website`,
+  url: siteConfig.siteUrl,
+  name: "Health Stuenes",
+  description:
+    "Holistiska behandlingar, yoga och mindfulness för dig som söker balans och återhämtning.",
+  inLanguage: "sv-SE",
+  publisher: { "@id": `${siteConfig.siteUrl}/#business` },
 };
 
 export default function RootLayout({
@@ -112,8 +190,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
         <SiteHeader />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 min-h-screen bg-[#1A120D] text-[#F5F1EB]">{children}</main>
         <SiteFooter />
       </body>
     </html>
