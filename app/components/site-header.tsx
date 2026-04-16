@@ -7,6 +7,7 @@ import { useState } from "react";
 const navLinks = [
   { href: "/", label: "Start" },
   { href: "/om-oss", label: "Om oss" },
+  { href: "/tjanster", label: "Tjänster" },
   { href: "/faq", label: "FAQ" },
   { href: "/kontakt", label: "Kontakt" },
 ];
@@ -75,6 +76,9 @@ export function SiteHeader() {
           </Link>
 
           <nav aria-label="Höger meny" className="flex items-center gap-4 lg:gap-6">
+            <Link href="/tjanster" className="text-[0.8rem] font-medium uppercase tracking-[0.12em] text-[#d8ccbb] transition hover:text-[#c6a46c]">
+              Tjänster
+            </Link>
             <Link href="/faq" className="text-[0.8rem] font-medium uppercase tracking-[0.12em] text-[#d8ccbb] transition hover:text-[#c6a46c]">
               FAQ
             </Link>

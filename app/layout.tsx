@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteFooter } from "./components/site-footer";
@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
+  applicationName: siteConfig.siteName,
   title: {
     default: "Carina Stuenes | Holistisk hälsa och välmående",
     template: "%s | Carina Stuenes",
@@ -73,6 +74,17 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+  formatDetection: {
+    email: true,
+    address: true,
+    telephone: true,
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#1A120D",
 };
 
 const organizationJsonLd = {

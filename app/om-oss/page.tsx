@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { createPageMetadata } from "../seo";
-import { company } from "../site-data";
+import { company, siteConfig } from "../site-data";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Om Carina Stuenes",
@@ -17,9 +17,44 @@ const trustItems = [
   "Verksam i Stockholm och Östersund",
 ];
 
+const aboutJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": `${siteConfig.siteUrl}/om-oss#webpage`,
+  url: `${siteConfig.siteUrl}/om-oss`,
+  name: "Om Carina Stuenes",
+  description:
+    "Lär känna Carina Stuenes, holistisk terapeut med erfarenhet av massage, koppning, biomagnetism och yoga i Stockholm och Östersund.",
+  inLanguage: "sv-SE",
+  isPartOf: { "@id": `${siteConfig.siteUrl}/#website` },
+  about: { "@id": `${siteConfig.siteUrl}/#carina` },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Start",
+        item: siteConfig.siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Om oss",
+        item: `${siteConfig.siteUrl}/om-oss`,
+      },
+    ],
+  },
+};
+
 export default function AboutPage() {
   return (
     <div className="content-shell pb-20 pt-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
+      />
+
       <div className="space-y-16">
         <section className="floating-section mt-2 px-3 py-12 sm:px-6 sm:py-14 lg:px-8">
           <div className="grid items-start gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10">
@@ -57,7 +92,7 @@ export default function AboutPage() {
 
         <section className="floating-section floating-section-soft px-3 py-12 sm:px-6 sm:py-14 lg:px-8">
           <p className="text-sm uppercase tracking-[0.18em] text-stone-600">Min historia</p>
-          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Min resa började med…</h2>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Min resa började</h2>
 
           <div className="mt-8 space-y-5 text-sm leading-7 text-stone-700">
             <p>
@@ -83,6 +118,10 @@ export default function AboutPage() {
               Men någonstans där började också en ny resa. En resa där jag började lyssna på kroppen – på riktigt. Steg för steg, med tålamod och nyfikenhet, började jag hitta vägar tillbaka. Inte genom snabba lösningar, utan genom att arbeta med kroppen som en helhet.
             </p>
 
+            <p>
+              Började studera anatomi, fysiologi, kinesisk medicin, ayurveda, yogalärareutbildning, näringslära, örter, kroppens uppbyggnad och hur allt hänger samman.
+            </p>
+
             <p className="text-base font-semibold text-stone-900">
               Idag lever jag ett aktivt liv.
             </p>
@@ -106,9 +145,12 @@ export default function AboutPage() {
         </section>
 
         <div className="flex justify-center">
-          <img
+          <Image
             src="/yoga.jpg"
             alt="Carina i yogaposition"
+            width={1200}
+            height={800}
+            sizes="(min-width: 1024px) 50rem, (min-width: 640px) 80vw, 96vw"
             className="w-full max-w-lg rounded-2xl object-contain shadow-md"
           />
         </div>

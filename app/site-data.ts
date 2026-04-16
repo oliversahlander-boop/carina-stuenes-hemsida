@@ -4,8 +4,10 @@ export const company = {
   email: "stuenesshop@gmail.com",
   phone: "0767402432",
   phoneLink: "tel:+46767402432",
-  smsLink: "sms:+46767402432?body=Hej!%20Jag%20vill%20boka%20en%20tid.",
-  bookingUrl: "sms:+46767402432?body=Hej!%20Jag%20vill%20boka%20en%20tid.",
+  smsLink:
+    "sms:+46767402432?body=Hej%20Carina!%0AJag%20vill%20g%C3%A4rna%20boka%20en%20behandling%20hos%20dig.%20Du%20f%C3%A5r%20g%C3%A4rna%20%C3%A5terkomma%20med%20lediga%20tider%20n%C3%A4r%20du%20har%20m%C3%B6jlighet.",
+  bookingUrl:
+    "sms:+46767402432?body=Hej%20Carina!%0AJag%20vill%20g%C3%A4rna%20boka%20en%20behandling%20hos%20dig.%20Du%20f%C3%A5r%20g%C3%A4rna%20%C3%A5terkomma%20med%20lediga%20tider%20n%C3%A4r%20du%20har%20m%C3%B6jlighet.",
 };
 
 export const siteConfig = {
@@ -133,21 +135,31 @@ export const faqs = [
   {
     question: "Hur bokar jag en tid?",
     answer:
-      "Det enklaste är att klicka på \"Boka tid\" och skicka ett mejl. Du kan också ringa, så hittar vi en tid som passar dig.",
+      "Det enklaste är att klicka på \"Boka tid\" och skicka ett sms. Du kan också använda kontaktformuläret, så återkommer vi med lediga tider.",
   },
   {
-    question: "Erbjuder ni behandling på plats hos företag?",
+    question: "Vilka behandlingar kan jag boka?",
     answer:
-      "Ja. Carina kan komma ut till företag och grupper när det passar bättre att ses på plats hos er.",
+      "Du kan boka massage, koppning, biomagnetisk behandling, IR-ljus och mixad behandling. Är du osäker hjälper vi dig att välja rätt.",
   },
   {
-    question: "Behöver jag vara van vid yoga eller mindfulness?",
+    question: "Hur lång är en behandling?",
     answer:
-      "Nej, inte alls. Allt anpassas efter din nivå och efter hur du mår just nu.",
+      "Det beror på behandling. Vanliga tider är 30, 45, 60 eller 90 minuter.",
   },
   {
     question: "Hur vet jag vilken behandling som passar mig?",
     answer:
       "Du behöver inte veta det på förhand. Vi börjar med att prata om hur du mår, så hittar vi en behandling som känns rätt för dig.",
+  },
+  {
+    question: "Kan jag köpa presentkort eller behandlingskort?",
+    answer:
+      "Ja. Du kan köpa presentkort, värdebevis och behandlingskort för 1 timme (5 eller 10 gånger). Hör av dig via kontaktformuläret så hjälper vi dig.",
+  },
+  {
+    question: "Erbjuder ni behandling på plats hos företag?",
+    answer:
+      "Ja. Vi kan komma ut till företag och grupper när det passar bättre att ses på plats hos er.",
   },
 ];

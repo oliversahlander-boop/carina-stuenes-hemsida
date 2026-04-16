@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { CtaBand } from "../components/cta-band";
 import { createPageMetadata } from "../seo";
 import { ContactForm } from "./contact-form";
-import { company } from "../site-data";
+import { company, siteConfig } from "../site-data";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Kontakt & bokning",
@@ -11,9 +11,44 @@ export const metadata: Metadata = createPageMetadata({
   path: "/kontakt",
 });
 
+const contactJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "@id": `${siteConfig.siteUrl}/kontakt#webpage`,
+  url: `${siteConfig.siteUrl}/kontakt`,
+  name: "Kontakt & bokning",
+  description:
+    "Boka behandling eller ställ en fråga till Carina Stuenes i Stockholm och Östersund.",
+  inLanguage: "sv-SE",
+  isPartOf: { "@id": `${siteConfig.siteUrl}/#website` },
+  about: { "@id": `${siteConfig.siteUrl}/#business` },
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Start",
+        item: siteConfig.siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Kontakt",
+        item: `${siteConfig.siteUrl}/kontakt`,
+      },
+    ],
+  },
+};
+
 export default function ContactPage() {
   return (
     <div className="content-shell pb-16 pt-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactJsonLd) }}
+      />
+
       <section>
         <p className="text-sm uppercase tracking-[0.2em] text-stone-600">Kontakt</p>
         <h1 className="mt-3 text-4xl font-semibold text-stone-900">Boka tid eller skicka en fråga</h1>
@@ -51,7 +86,7 @@ export default function ContactPage() {
       <section className="mt-10">
         <CtaBand
           title="Hjälper gärna till"
-          text="Skicka en förfrågan så svarar jag med förslag på tid och uppförhållningssätt."
+          text="Skicka en förfrågan så svarar vi med förslag på tid och upplägg."
         />
       </section>
     </div>

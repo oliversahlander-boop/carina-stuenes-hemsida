@@ -1,8 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
-import { createPageMetadata } from "./seo";
-import { company } from "./site-data";
+import { company, seoKeywords, siteConfig } from "./site-data";
 
 export const metadata: Metadata = {
   title: {
@@ -10,8 +9,33 @@ export const metadata: Metadata = {
   },
   description:
     "Holistiska behandlingar i Stockholm och Östersund. Massage, koppning, biomagnetism, yoga och mindfulness – anpassat efter dig. Boka din tid hos Carina Stuenes.",
+  keywords: seoKeywords,
   alternates: {
     canonical: "/",
+  },
+  openGraph: {
+    title: "Carina Stuenes – Massage & holistisk behandling i Stockholm",
+    description:
+      "Holistiska behandlingar i Stockholm och Östersund. Massage, koppning, biomagnetism, yoga och mindfulness – anpassat efter dig.",
+    url: siteConfig.siteUrl,
+    siteName: siteConfig.siteName,
+    type: "website",
+    locale: siteConfig.locale,
+    images: [
+      {
+        url: siteConfig.defaultOgImage,
+        width: 1200,
+        height: 630,
+        alt: "Carina Stuenes – Holistisk hälsa och välmående",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Carina Stuenes – Massage & holistisk behandling i Stockholm",
+    description:
+      "Holistiska behandlingar i Stockholm och Östersund. Massage, koppning, biomagnetism, yoga och mindfulness – anpassat efter dig.",
+    images: [siteConfig.defaultOgImage],
   },
 };
 
@@ -86,15 +110,12 @@ export default function Home() {
           Ingen behandling är den andra lik — för ingen människa är det.
         </p>
         <div className="mt-12">
-          <div className="mx-auto flex w-full max-w-3xl flex-col gap-4 rounded-3xl border border-[rgba(159,125,84,0.28)] bg-[linear-gradient(180deg,rgba(245,235,223,0.82),rgba(231,218,199,0.82))] px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-7">
-            <p className="text-sm leading-relaxed text-[#5c4632] sm:text-base">
-              Vill du känna efter vad just din kropp behöver?
-            </p>
+          <div className="mx-auto flex w-full max-w-3xl items-center justify-center rounded-3xl border border-[rgba(159,125,84,0.28)] bg-[linear-gradient(180deg,rgba(245,235,223,0.82),rgba(231,218,199,0.82))] px-5 py-5 sm:px-7">
             <a
-              href={company.bookingUrl}
+              href="/kontakt"
               className="btn-primary w-full justify-center text-sm uppercase tracking-[0.16em] transition-all duration-300 hover:scale-[1.02] sm:w-auto"
             >
-              BOKA NU
+              KONTAKTA OSS
             </a>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { CtaBand } from "../components/cta-band";
 import { createPageMetadata } from "../seo";
-import { faqs } from "../site-data";
+import { faqs, siteConfig } from "../site-data";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Vanliga frågor",
@@ -13,6 +13,10 @@ export const metadata: Metadata = createPageMetadata({
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "@id": `${siteConfig.siteUrl}/faq#webpage`,
+  url: `${siteConfig.siteUrl}/faq`,
+  inLanguage: "sv-SE",
+  isPartOf: { "@id": `${siteConfig.siteUrl}/#website` },
   mainEntity: faqs.map((item) => ({
     "@type": "Question",
     name: item.question,
@@ -21,6 +25,23 @@ const faqJsonLd = {
       text: item.answer,
     },
   })),
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Start",
+        item: siteConfig.siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "FAQ",
+        item: `${siteConfig.siteUrl}/faq`,
+      },
+    ],
+  },
 };
 
 export default function FaqPage() {
