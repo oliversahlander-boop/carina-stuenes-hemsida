@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CtaBand } from "../components/cta-band";
 import { createPageMetadata } from "../seo";
 import { ContactForm } from "./contact-form";
@@ -53,7 +54,12 @@ export default function ContactPage() {
         <p className="text-sm uppercase tracking-[0.2em] text-stone-600">Kontakt</p>
         <h1 className="mt-3 text-4xl font-semibold text-stone-900">Boka tid eller skicka en fråga</h1>
         <p className="mt-4 max-w-2xl text-stone-700">
-          Du är välkommen att höra av dig om du vill boka en tid eller bara vill stämma av vad som skulle passa dig bäst.
+          Du är välkommen att höra av dig om du vill boka en tid eller bara vill stämma av vad som skulle passa dig bäst i Stockholm och Östersund.{" "}
+          Inte säker på vilken behandling du vill ha?{" "}
+          <Link href="/tjanster" className="font-semibold text-[#c6a46c] transition-colors hover:text-[#d4a373]">
+            Se alla behandlingar här
+          </Link>
+          .
         </p>
       </section>
 
@@ -77,7 +83,7 @@ export default function ContactPage() {
           <div className="mt-6 rounded-2xl bg-[rgba(20,15,12,0.5)] p-5">
             <h3 className="font-semibold text-stone-900">Mobila tjänster</h3>
             <p className="mt-2 text-sm text-stone-700">
-              Det går också bra att boka behandlingar för företag och grupper på plats hos er.
+              Det går också bra att boka behandlingar för företag och grupper på plats hos er i Stockholm och Östersund.
             </p>
           </div>
         </aside>
@@ -86,7 +92,7 @@ export default function ContactPage() {
       <section className="mt-10">
         <CtaBand
           title="Hjälper gärna till"
-          text="Skicka en förfrågan så svarar vi med förslag på tid och upplägg."
+          text="Skicka en förfrågan så svarar vi med förslag på tid och upplägg i Stockholm och Östersund."
         />
       </section>
     </div>

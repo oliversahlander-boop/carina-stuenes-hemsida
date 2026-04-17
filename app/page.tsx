@@ -78,7 +78,7 @@ export default function Home() {
               Behandlingar som ser hela dig — inte bara symtomen
             </h1>
             <p className="hero-fade mt-10 max-w-[62ch] text-base leading-relaxed text-[#d9c9b5] [animation-delay:240ms] sm:text-lg">
-              Här får du landa, bli lyssnad på och börja förstå din kropp.
+              Här får du landa, bli lyssnad på och börja förstå din kropp, med behandlingar i Stockholm och Östersund.
             </p>
             <p className="hero-fade mt-4 max-w-[52ch] text-[1.08rem] italic font-medium leading-relaxed text-[#f5f1eb] [animation-delay:300ms] sm:text-xl">
               Jag möter dig där du är — med lugn, närvaro och omtanke.
@@ -104,7 +104,7 @@ export default function Home() {
       <section id="start-content" className="content-shell floating-section floating-section-warm mt-10 px-4 py-10 sm:mt-14 sm:px-6 sm:py-14 lg:px-8">
         <h2 className="max-w-[18ch] text-3xl font-semibold !text-[#4b3421]">Här ser jag hela dig — inte bara det som gör ont.</h2>
         <p className="mt-6 max-w-[70ch] text-base leading-relaxed text-[#5c4632] sm:text-lg">
-          Jag arbetar utifrån ett holistiskt perspektiv där kropp, tanke och livssituation hänger ihop. Med bred erfarenhet och genuint engagemang anpassar jag varje behandling efter din dagsform och dina behov.
+          Jag arbetar utifrån ett holistiskt perspektiv där kropp, tanke och livssituation hänger ihop. Med bred erfarenhet och genuint engagemang anpassar jag varje behandling efter din dagsform och dina behov i Stockholm och Östersund.
         </p>
         <p className="mt-4 max-w-[52ch] text-[1.02rem] leading-relaxed text-[#6a513a] sm:text-lg">
           Ingen behandling är den andra lik — för ingen människa är det.
@@ -155,7 +155,7 @@ export default function Home() {
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
           <h2 className="text-3xl font-semibold !text-[#5f4933]">Tjänster</h2>
           <p className="max-w-[34ch] text-sm leading-relaxed text-[#5f4933] sm:text-right">
-            Jag erbjuder olika tjänster för både kropp och välmående — alltid anpassat efter hur du mår just idag.
+            Jag erbjuder olika tjänster för både kropp och välmående i Stockholm och Östersund — alltid anpassat efter hur du mår just idag.
           </p>
         </div>
         <div className="mt-8 grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">

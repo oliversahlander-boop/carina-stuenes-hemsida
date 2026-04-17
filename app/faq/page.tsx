@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CtaBand } from "../components/cta-band";
 import { createPageMetadata } from "../seo";
 import { faqs, siteConfig } from "../site-data";
@@ -54,6 +55,14 @@ export default function FaqPage() {
       <section>
         <p className="text-sm uppercase tracking-[0.2em] text-stone-600">FAQ</p>
         <h1 className="mt-3 text-4xl font-semibold text-stone-900">Vanliga frågor</h1>
+        <p className="mt-4 max-w-2xl text-stone-700">
+          Här hittar du svar på vanliga frågor om behandlingar och bokning i Stockholm och Östersund.{" "}
+          Vill du veta mer om{" "}
+          <Link href="/tjanster" className="font-semibold text-[#c6a46c] transition-colors hover:text-[#d4a373]">våra behandlingar</Link>
+          {" "}eller{" "}
+          <Link href="/om-oss" className="font-semibold text-[#c6a46c] transition-colors hover:text-[#d4a373]">vem jag är</Link>
+          {" "}hittar du det i menyn.
+        </p>
       </section>
 
       <section className="mt-8 space-y-4">
@@ -70,7 +79,7 @@ export default function FaqPage() {
       <section className="mt-10">
         <CtaBand
           title="Har du fler frågor?"
-          text="Om du funderar på något är det bara att höra av dig, så svarar vi så gott vi kan."
+          text="Om du funderar på något är det bara att höra av dig, så svarar vi så gott vi kan för bokning i Stockholm och Östersund."
         />
       </section>
     </div>

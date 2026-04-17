@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { createPageMetadata } from "../seo";
 import { company, siteConfig } from "../site-data";
 
@@ -59,16 +60,14 @@ export default function AboutPage() {
         <section className="floating-section mt-2 px-3 py-12 sm:px-6 sm:py-14 lg:px-8">
           <div className="grid items-start gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10">
           <div>
-            <p className="text-sm uppercase tracking-[0.2em] text-stone-600">Carina</p>
             <h1 className="mt-3 max-w-[22ch] text-3xl font-semibold leading-[1.14] text-stone-900 sm:text-4xl">
-              När kroppen säger ifrån finns det en anledning
+              Om Carina – kroppsterapeut i Stockholm &amp; Östersund
             </h1>
             <p className="mt-6 max-w-[46ch] text-base leading-relaxed text-stone-700">
-              Jag vet hur det känns när kroppen säger ifrån – när spänningar, smärta eller stress tar över och ingen riktigt lyssnar på helheten.
+              Jag arbetar som kroppsterapeut och erbjuder massage, koppning och holistiska behandlingar i Stockholm och Östersund.
             </p>
             <p className="mt-4 max-w-[46ch] text-base leading-relaxed text-stone-700">
-              Här får du en stund att landa, bli lyssnad på och mötas där du är.
-              Jag arbetar med ett helhetsperspektiv där kropp, tanke och livssituation hänger ihop – och där varje behandling anpassas efter dig.
+              Mitt fokus är att hjälpa dig minska stress, spänningar och smärta genom behandlingar som ser till hela kroppen i Stockholm och Östersund.
             </p>
             <p className="mt-6 inline-flex max-w-fit items-center rounded-full border border-[rgba(198,164,108,0.32)] bg-[rgba(212,163,115,0.12)] px-4 py-2 text-sm font-medium tracking-[0.02em] text-[#d6c2a8] sm:text-base">
               Stockholm &amp; Östersund
@@ -139,7 +138,7 @@ export default function AboutPage() {
             </p>
 
             <p>
-              Det är därför jag gör det jag gör idag — för att hjälpa dig förstå din kropp, hitta balans och skapa verklig förändring.
+              Det är därför jag gör det jag gör idag — för att hjälpa dig förstå din kropp, hitta balans och skapa verklig förändring i Stockholm och Östersund.
             </p>
           </div>
         </section>
@@ -211,6 +210,16 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <section className="floating-section px-3 py-10 sm:px-6 sm:py-12 lg:px-8">
+          <p className="text-base leading-relaxed text-stone-700">
+            Nyfiken på vilka behandlingar jag erbjuder?{" "}
+            <Link href="/tjanster" className="font-semibold text-[#c6a46c] transition-colors hover:text-[#d4a373]">
+              Läs mer om mina behandlingar här
+            </Link>
+            .
+          </p>
+        </section>
+
         <section className="floating-section floating-section-soft px-3 py-10 sm:px-6 sm:py-12 lg:px-8">
           <ul className="flex flex-wrap gap-x-10 gap-y-4">
             {trustItems.map((item) => (
@@ -230,14 +239,22 @@ export default function AboutPage() {
             Redo att lyssna på din kropp?
           </h2>
           <p className="mx-auto mt-4 max-w-[52ch] text-base leading-relaxed text-stone-300">
-            Ta första steget mot balans med en behandling som utgår från dig och dina behov.
+            Ta första steget mot balans med en behandling som utgår från dig och dina behov, oavsett om du bokar i Stockholm eller i Östersund.
           </p>
-          <a
-            href={company.bookingUrl}
-            className="btn-light mt-8 inline-flex w-full justify-center min-w-[10rem] sm:w-auto"
-          >
-            Boka tid
-          </a>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <a
+              href={company.bookingUrl}
+              className="btn-light inline-flex min-w-[10rem] justify-center sm:w-auto"
+            >
+              Boka tid
+            </a>
+            <Link
+              href="/tjanster"
+              className="inline-flex items-center justify-center rounded-full border border-[rgba(198,164,108,0.3)] px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-[#c6a46c] transition-colors hover:text-[#d4a373]"
+            >
+              Se behandlingar
+            </Link>
+          </div>
         </section>
       </div>
     </div>

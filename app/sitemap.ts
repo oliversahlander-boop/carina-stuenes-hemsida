@@ -4,6 +4,10 @@ import { siteConfig } from "./site-data";
 const pages: Array<{ path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }> = [
   { path: "",          priority: 1.0, changeFrequency: "weekly" },
   { path: "/tjanster", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/massage-stockholm", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/koppning-stockholm", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/biomagnetisk-behandling", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/ir-ljus-behandling", priority: 0.9, changeFrequency: "monthly" },
   { path: "/om-oss",   priority: 0.8, changeFrequency: "monthly" },
   { path: "/kontakt",  priority: 0.8, changeFrequency: "monthly" },
   { path: "/faq",      priority: 0.7, changeFrequency: "monthly" },

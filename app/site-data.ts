@@ -162,4 +162,24 @@ export const faqs = [
     answer:
       "Ja. Vi kan komma ut till företag och grupper när det passar bättre att ses på plats hos er.",
   },
+  {
+    question: "Vad kostar massage i Stockholm?",
+    answer:
+      "Behandlingar börjar från 395 kr beroende på längd och upplägg. Jag erbjuder massage i Stockholm och Östersund i 30, 60 och 90 minuter. Hör av dig så går vi igenom vad som passar dig.",
+  },
+  {
+    question: "Hur ofta bör man gå på massage?",
+    answer:
+      "Det beror på vad du vill uppnå. För återhämtning och stresshantering kan en gång i månaden räcka. Vid mer specifika spänningar eller smärta kan tätare behandlingar ge bättre resultat. Vi hittar ett upplägg som fungerar för dig.",
+  },
+  {
+    question: "Hjälper koppning mot stress?",
+    answer:
+      "Ja, koppning kan bidra till att kroppen slappnar av och att spänningar löses upp. Behandlingen stimulerar cirkulationen och lymfsystemet, vilket kan ha en lugnande och återhämtande effekt. Koppning erbjuds i Stockholm och Östersund.",
+  },
+  {
+    question: "Vad är biomagnetisk behandling?",
+    answer:
+      "Biomagnetisk behandling är en metod där magneter placeras på specifika punkter på kroppen för att stödja kroppens naturliga balans. Behandlingen sker liggande och är lugn och skonsam. Den erbjuds i Stockholm och Östersund som ett holistiskt komplement.",
+  },
 ];

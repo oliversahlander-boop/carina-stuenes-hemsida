@@ -65,9 +65,9 @@ export default function ServicesPage() {
 
       <section className="max-w-2xl lg:ml-6">
         <p className="text-sm uppercase tracking-[0.2em] text-stone-600">Tjänster</p>
-        <h1 className="mt-4 text-4xl font-semibold leading-tight text-stone-900 sm:text-5xl">Tjänster</h1>
+        <h1 className="mt-4 text-4xl font-semibold leading-tight text-stone-900 sm:text-5xl">Massage, koppning &amp; kroppsterapi i Stockholm och Östersund</h1>
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-stone-700 sm:text-lg">
-          Här hittar du behandlingar för både kropp och återhämtning.
+          Här hittar du behandlingar för både kropp och återhämtning i Stockholm och Östersund.
           Alla behandlingar anpassas efter hur du mår just nu och vad din kropp behöver.
         </p>
       </section>
@@ -79,8 +79,14 @@ export default function ServicesPage() {
               <h2 className="text-2xl font-semibold text-stone-900 sm:text-3xl">Massage</h2>
               <p className="mt-3 text-lg text-stone-700">30 min · 60 min · 90 min</p>
               <p className="mt-6 max-w-xl leading-relaxed text-stone-700">
-                Massage för dig som vill släppa på spänningar, öka cirkulationen och ge kroppen ny energi.
+                Massage för dig som vill släppa på spänningar, öka cirkulationen och ge kroppen ny energi i Stockholm och Östersund.
               </p>
+              <Link
+                href="/massage-stockholm"
+                className="mt-5 inline-flex text-sm font-semibold uppercase tracking-[0.16em] text-[#c6a46c] transition-colors hover:text-[#d4a373]"
+              >
+                Visa behandling
+              </Link>
               <p className="mt-5 max-w-xl leading-relaxed text-stone-700">Du kan välja mellan:</p>
               <ul className="mt-4 space-y-4 border-l border-[rgba(198,164,108,0.35)] pl-5">
                 <li>
@@ -130,8 +136,14 @@ export default function ServicesPage() {
             på stagnationer och spänningar.
           </p>
           <p className="mt-5 max-w-2xl leading-relaxed text-stone-700">
-            Behandlingen passar dig som vill arbeta mer på djupet och ge kroppen stöd i sin återhämtning.
+            Behandlingen passar dig som vill arbeta mer på djupet och ge kroppen stöd i sin återhämtning i Stockholm och Östersund.
           </p>
+          <Link
+            href="/koppning-stockholm"
+            className="mt-5 inline-flex text-sm font-semibold uppercase tracking-[0.16em] text-[#c6a46c] transition-colors hover:text-[#d4a373]"
+          >
+            Visa behandling
+          </Link>
         </article>
 
         <article className="mt-24 sm:mt-28">
@@ -143,8 +155,14 @@ export default function ServicesPage() {
           </p>
           <p className="mt-5 max-w-2xl leading-relaxed text-stone-700">
             Behandlingen sker liggande på bänk och används som en lugn, terapeutisk metod för dig som vill
-            arbeta mer holistiskt med kroppens inre återhämtning.
+            arbeta mer holistiskt med kroppens inre återhämtning i Stockholm och Östersund.
           </p>
+          <Link
+            href="/biomagnetisk-behandling"
+            className="mt-5 inline-flex text-sm font-semibold uppercase tracking-[0.16em] text-[#c6a46c] transition-colors hover:text-[#d4a373]"
+          >
+            Visa behandling
+          </Link>
         </article>
       </section>
 
@@ -170,6 +188,12 @@ export default function ServicesPage() {
           <p className="mt-5 max-w-2xl leading-relaxed text-stone-700">
             IR-ljus används ofta som ett komplement i behandling för att ge kroppen extra stöd.
           </p>
+          <Link
+            href="/ir-ljus-behandling"
+            className="mt-5 inline-flex text-sm font-semibold uppercase tracking-[0.16em] text-[#c6a46c] transition-colors hover:text-[#d4a373]"
+          >
+            Visa behandling
+          </Link>
         </article>
 
         <article className="mt-20 sm:mt-24">
@@ -220,6 +244,26 @@ export default function ServicesPage() {
               Om du har funderingar eller är osäker på vilken behandling som passar bäst, är du alltid välkommen
               att höra av dig så tittar vi på det tillsammans.
             </p>
+            <div className="mt-6 flex flex-wrap gap-5">
+              <Link
+                href="/om-oss"
+                className="text-sm font-semibold uppercase tracking-[0.16em] text-[#c6a46c] transition-colors hover:text-[#d4a373]"
+              >
+                Läs mer om mig här
+              </Link>
+              <Link
+                href="/faq"
+                className="text-sm font-semibold uppercase tracking-[0.16em] text-[#c6a46c] transition-colors hover:text-[#d4a373]"
+              >
+                Vanliga frågor
+              </Link>
+              <Link
+                href="/kontakt"
+                className="text-sm font-semibold uppercase tracking-[0.16em] text-[#c6a46c] transition-colors hover:text-[#d4a373]"
+              >
+                Kontakta mig
+              </Link>
+            </div>
           </article>
 
           <article className="rounded-xl border border-[rgba(198,164,108,0.18)] bg-[rgba(198,164,108,0.025)] px-4 py-5 sm:px-5 sm:py-6">
