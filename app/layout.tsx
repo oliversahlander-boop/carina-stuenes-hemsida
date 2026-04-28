@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
+import { PageViewTracker } from "./components/page-view-tracker";
 import { company, seoKeywords, services, siteConfig } from "./site-data";
 
 const geistSans = Geist({
@@ -209,6 +210,7 @@ export default function RootLayout({
         <SiteHeader />
         <main className="flex-1 min-h-screen bg-[#1A120D] text-[#F5F1EB]">{children}</main>
         <SiteFooter />
+        <PageViewTracker />
       </body>
     </html>
   );

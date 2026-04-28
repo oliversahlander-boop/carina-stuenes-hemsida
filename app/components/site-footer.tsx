@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { company } from "../site-data";
+import { TrackedLink } from "./tracked-link";
 
 export function SiteFooter() {
   return (
@@ -37,9 +38,14 @@ export function SiteFooter() {
               </a>
             </li>
             <li>
-              <a className="font-medium text-[#d4a373] transition hover:text-[#e3c39c]" href={company.bookingUrl}>
+              <TrackedLink
+                className="font-medium text-[#d4a373] transition hover:text-[#e3c39c]"
+                href={company.bookingUrl}
+                eventName="booking_click"
+                eventSource="footer_booking"
+              >
                 Boka tid →
-              </a>
+              </TrackedLink>
             </li>
           </ul>
         </section>
@@ -99,9 +105,14 @@ export function SiteFooter() {
             <li className="leading-relaxed">Olof Dalins väg 6<br />112 52, Stockholm</li>
             <li className="leading-relaxed">Pastorsgatan 3<br />831 35, Östersund</li>
             <li className="pt-1">
-              <Link className="font-medium text-[#d4a373] transition hover:text-[#e3c39c]" href="/kontakt">
+              <TrackedLink
+                className="font-medium text-[#d4a373] transition hover:text-[#e3c39c]"
+                href="/kontakt"
+                eventName="contact_click"
+                eventSource="footer_contact"
+              >
                 Kontakta oss →
-              </Link>
+              </TrackedLink>
             </li>
           </ul>
         </section>
@@ -110,7 +121,15 @@ export function SiteFooter() {
       <div className="border-t border-[rgba(198,164,108,0.18)]">
         <div className="mx-auto w-full max-w-[88rem] px-4 py-3 text-center sm:px-6 lg:px-10">
           <p className="text-xs uppercase tracking-[0.12em] text-[#7a6a58]">
-            Skapad av One Media
+            Skapad av{" "}
+            <a
+              href="https://one-media.se/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition hover:text-[#e3c39c]"
+            >
+              One Media
+            </a>
           </p>
         </div>
       </div>

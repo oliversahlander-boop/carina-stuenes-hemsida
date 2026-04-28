@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { TrackedLink } from "../components/tracked-link";
 import { createPageMetadata } from "../seo";
 import { company, siteConfig } from "../site-data";
 
@@ -242,12 +243,14 @@ export default function AboutPage() {
             Ta första steget mot balans med en behandling som utgår från dig och dina behov, oavsett om du bokar i Stockholm eller i Östersund.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a
+            <TrackedLink
               href={company.bookingUrl}
+              eventName="booking_click"
+              eventSource="about_bottom_booking"
               className="btn-light inline-flex min-w-[10rem] justify-center sm:w-auto"
             >
               Boka tid
-            </a>
+            </TrackedLink>
             <Link
               href="/tjanster"
               className="inline-flex items-center justify-center rounded-full border border-[rgba(198,164,108,0.3)] px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-[#c6a46c] transition-colors hover:text-[#d4a373]"

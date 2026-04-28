@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { TrackedLink } from "../components/tracked-link";
 import { createPageMetadata } from "../seo";
 import { company, siteConfig } from "../site-data";
 
@@ -227,12 +228,14 @@ export default function ServicesPage() {
           <li>presentkort eller värdebevis</li>
         </ul>
         <p className="mt-5 max-w-2xl leading-relaxed text-stone-700">För att köpa presentkort, hör av dig till oss.</p>
-        <Link
+        <TrackedLink
           href="/kontakt"
+          eventName="contact_click"
+          eventSource="services_gift_card_contact"
           className="mt-4 inline-flex text-sm font-semibold uppercase tracking-[0.16em] text-[#c6a46c] transition-colors hover:text-[#d4a373]"
         >
           Kontakta oss för presentkort
-        </Link>
+        </TrackedLink>
         <p className="mt-5 max-w-2xl leading-relaxed text-stone-700">Perfekt både för dig själv eller som gåva.</p>
       </section>
 
@@ -257,24 +260,28 @@ export default function ServicesPage() {
               >
                 Vanliga frågor
               </Link>
-              <Link
+              <TrackedLink
                 href="/kontakt"
+                eventName="contact_click"
+                eventSource="services_unsure_contact"
                 className="text-sm font-semibold uppercase tracking-[0.16em] text-[#c6a46c] transition-colors hover:text-[#d4a373]"
               >
                 Kontakta mig
-              </Link>
+              </TrackedLink>
             </div>
           </article>
 
           <article className="rounded-xl border border-[rgba(198,164,108,0.18)] bg-[rgba(198,164,108,0.025)] px-4 py-5 sm:px-5 sm:py-6">
             <h2 className="text-2xl font-semibold text-stone-900">Boka tid</h2>
             <p className="mt-3 leading-relaxed text-stone-700">En stund för dig, där kroppen får ta plats.</p>
-            <Link
+            <TrackedLink
               href={company.bookingUrl}
+              eventName="booking_click"
+              eventSource="services_booking"
               className="mt-6 inline-flex text-sm font-semibold uppercase tracking-[0.16em] text-[#c6a46c] transition-colors hover:text-[#d4a373]"
             >
               Boka tid
-            </Link>
+            </TrackedLink>
           </article>
         </div>
       </section>

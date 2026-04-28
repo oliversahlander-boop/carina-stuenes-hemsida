@@ -1,4 +1,5 @@
 import { company } from "../site-data";
+import { TrackedLink } from "./tracked-link";
 
 type CtaBandProps = {
   title: string;
@@ -13,9 +14,14 @@ export function CtaBand({ title, text }: CtaBandProps) {
           <h2 className="text-2xl font-semibold text-[#f5f1eb]">{title}</h2>
           <p className="mt-2 max-w-2xl text-[#d8ccbb]">{text}</p>
         </div>
-        <a href={company.bookingUrl} className="btn-light">
+        <TrackedLink
+          href={company.bookingUrl}
+          eventName="booking_click"
+          eventSource="cta_band_booking"
+          className="btn-light"
+        >
           Boka tid
-        </a>
+        </TrackedLink>
       </div>
     </section>
   );

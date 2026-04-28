@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { TrackedLink } from "../components/tracked-link";
 import { createPageMetadata } from "../seo";
 import { company, siteConfig } from "../site-data";
 
@@ -81,9 +82,14 @@ export default function KoppningStockholmPage() {
           Hör av dig så hittar vi en tid och ett upplägg som passar dig i Stockholm och Östersund.
         </p>
         <div className="mt-7 flex flex-wrap gap-4">
-          <a href={company.bookingUrl} className="btn-light inline-flex min-w-[10rem] justify-center">
+          <TrackedLink
+            href={company.bookingUrl}
+            eventName="booking_click"
+            eventSource="koppning_page_booking"
+            className="btn-light inline-flex min-w-[10rem] justify-center"
+          >
             Boka tid
-          </a>
+          </TrackedLink>
           <Link
             href="/tjanster"
             className="inline-flex items-center justify-center rounded-full border border-[rgba(198,164,108,0.3)] px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] text-[#c6a46c] transition-colors hover:text-[#d4a373]"

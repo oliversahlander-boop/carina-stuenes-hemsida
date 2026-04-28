@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import { TrackedLink } from "./components/tracked-link";
 import { company, seoKeywords, siteConfig } from "./site-data";
 
 export const metadata: Metadata = {
@@ -62,7 +63,7 @@ export default function Home() {
       <section className="relative left-1/2 right-1/2 w-screen -translate-x-1/2 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover"
-          style={{ backgroundImage: "url('/massage-1.jpg')", backgroundPosition: "60% center" }}
+          style={{ backgroundImage: "url('/spa-massage-bakgrund.jpg')", backgroundPosition: "60% center" }}
           aria-hidden
         />
         <div
@@ -84,12 +85,14 @@ export default function Home() {
               Jag möter dig där du är — med lugn, närvaro och omtanke.
             </p>
             <div className="hero-fade mt-10 flex flex-col gap-3 [animation-delay:360ms] sm:flex-row sm:flex-wrap sm:gap-4">
-              <a
+              <TrackedLink
                 href={company.bookingUrl}
+                eventName="booking_click"
+                eventSource="home_hero_booking"
                 className="btn-primary w-full justify-center shadow-sm transition-all duration-300 hover:scale-[1.02] sm:w-auto"
               >
                 Boka tid
-              </a>
+              </TrackedLink>
               <Link
                 href="/tjanster"
                 className="btn-secondary w-full justify-center transition-all duration-300 hover:scale-[1.02] sm:w-auto"
@@ -111,12 +114,14 @@ export default function Home() {
         </p>
         <div className="mt-12">
           <div className="mx-auto flex w-full max-w-3xl items-center justify-center rounded-3xl border border-[rgba(159,125,84,0.28)] bg-[linear-gradient(180deg,rgba(245,235,223,0.82),rgba(231,218,199,0.82))] px-5 py-5 sm:px-7">
-            <a
+            <TrackedLink
               href="/kontakt"
+              eventName="contact_click"
+              eventSource="home_intro_contact"
               className="btn-primary w-full justify-center text-sm uppercase tracking-[0.16em] transition-all duration-300 hover:scale-[1.02] sm:w-auto"
             >
               KONTAKTA OSS
-            </a>
+            </TrackedLink>
           </div>
         </div>
       </section>
@@ -134,6 +139,17 @@ export default function Home() {
             <p className="mt-4 max-w-4xl text-base leading-relaxed text-[#d9c9b5] sm:text-lg">
               Därför jobbar jag inte efter en mall. Jag utgår från hur du mår just idag och försöker förstå vad din kropp faktiskt behöver.
             </p>
+            <div className="mt-8 border-l border-[rgba(198,164,108,0.38)] pl-5">
+              <h3 className="text-xl font-semibold text-[#f5f1eb]">
+                Massage i Stockholm och Östersund
+              </h3>
+              <p className="mt-4 max-w-4xl text-base leading-relaxed text-[#d9c9b5] sm:text-lg">
+                Jag erbjuder massage, kroppsterapi och holistiska behandlingar i Stockholm och Östersund för dig som vill minska spänningar, släppa stress och ge kroppen bättre återhämtning. Behandlingen kan innehålla klassisk massage, djupgående massage, koppning, biomagnetism, andning eller mindfulness beroende på vad du behöver.
+              </p>
+              <p className="mt-4 max-w-4xl text-base leading-relaxed text-[#a89880] sm:text-lg">
+                Oavsett om du söker massage i Stockholm, massage i Östersund eller en personlig behandling med fokus på helheten, möter jag dig med närvaro, erfarenhet och ett arbetssätt som anpassas efter din kropp.
+              </p>
+            </div>
           </div>
 
           <div className="overflow-hidden rounded-3xl border border-[rgba(198,164,108,0.2)] bg-[rgba(20,15,12,0.45)]">
@@ -249,9 +265,14 @@ export default function Home() {
             En behandling är ett tillfälle att andas, landa och komma i kontakt med sig själv.
             Du väljer takt och riktning.
           </p>
-          <a href={company.bookingUrl} className="btn-light mt-8 inline-flex w-full justify-center transition-all duration-300 hover:-translate-y-0.5 sm:w-auto">
+          <TrackedLink
+            href={company.bookingUrl}
+            eventName="booking_click"
+            eventSource="home_bottom_booking"
+            className="btn-light mt-8 inline-flex w-full justify-center transition-all duration-300 hover:-translate-y-0.5 sm:w-auto"
+          >
             Boka tid
-          </a>
+          </TrackedLink>
         </div>
       </section>
     </div>
