@@ -130,7 +130,7 @@ const organizationJsonLd = {
       name: "Health Stuenes Östersund",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Pastorsgatan 3",
+        streetAddress: "Frösön, Östersund",
         postalCode: "831 35",
         addressLocality: "Östersund",
         addressCountry: "SE",

@@ -103,7 +103,8 @@ export function SiteFooter() {
           <h2 className="text-sm font-semibold uppercase tracking-[0.1em] text-[#e3c39c]">Platser</h2>
           <ul className="space-y-2.5 text-sm text-[#b9a58d]">
             <li className="leading-relaxed">Olof Dalins väg 6<br />112 52, Stockholm</li>
-            <li className="leading-relaxed">Pastorsgatan 3<br />831 35, Östersund</li>
+            <li className="pt-2 text-xs font-semibold uppercase tracking-[0.1em] text-[#c6a46c]">Alternativ plats</li>
+            <li className="leading-relaxed">Frösön, Östersund</li>
             <li className="pt-1">
               <TrackedLink
                 className="font-medium text-[#d4a373] transition hover:text-[#e3c39c]"
