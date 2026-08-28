@@ -39,11 +39,10 @@ export default function KoppningStockholmPage() {
           Koppning i Stockholm och Östersund
         </h1>
         <p className="mt-6 max-w-3xl text-base leading-relaxed text-stone-700 sm:text-lg">
-          Koppning är en djupgående behandling där bindväven lyfts med hjälp av vakuum från kopparna i Stockholm och Östersund.
+          Koppning är en djupgående behandling där koppar skapar ett vakuum som lyfter bindväven.
         </p>
         <p className="mt-4 max-w-3xl text-base leading-relaxed text-stone-700">
-          Behandlingen kan bidra till ökad cirkulation, aktivering av lymfsystemet och hjälpa
-          kroppen att släppa på stagnationer och spänningar.
+          Behandlingen används för att arbeta djupgående med stela eller spända områden.
         </p>
       </section>
 
@@ -65,9 +64,9 @@ export default function KoppningStockholmPage() {
             <h2 className="text-2xl font-semibold text-stone-900">Upplägg</h2>
             <p className="mt-3 text-lg text-stone-700">30 min · 60 min · 90 min</p>
             <ul className="mt-6 list-disc space-y-2.5 pl-6 leading-relaxed text-stone-700 marker:text-[rgba(198,164,108,0.95)]">
-              <li>Djupgående arbete med bindväv och cirkulation</li>
+              <li>Djupgående arbete med bindväven</li>
               <li>Anpassad intensitet utifrån din dagsform</li>
-              <li>Passar dig som vill arbeta mer på djupet med återhämtning</li>
+              <li>Kan bokas som en egen behandling</li>
             </ul>
             <p className="mt-6 leading-relaxed text-stone-700">
               Behandlingen erbjuds i Stockholm och Östersund.
@@ -79,7 +78,7 @@ export default function KoppningStockholmPage() {
       <section className="mt-14 max-w-3xl border-t border-[rgba(198,164,108,0.16)] pt-10 lg:ml-6">
         <h2 className="text-2xl font-semibold text-stone-900">Boka koppning</h2>
         <p className="mt-4 max-w-2xl leading-relaxed text-stone-700">
-          Hör av dig så hittar vi en tid och ett upplägg som passar dig i Stockholm och Östersund.
+          Skicka ett sms, så återkommer jag med lediga tider.
         </p>
         <div className="mt-7 flex flex-wrap gap-4">
           <TrackedLink

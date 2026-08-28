@@ -13,8 +13,8 @@ export const metadata: Metadata = createPageMetadata({
 });
 
 const trustItems = [
-  "Holistiskt synsätt",
-  "Anpassat efter dig",
+  "Samtal före behandlingen",
+  "Anpassat efter dagsform",
   "Erfarenhet från olika typer av klienter",
   "Verksam i Stockholm och Östersund",
 ];
@@ -68,7 +68,7 @@ export default function AboutPage() {
               Jag arbetar som kroppsterapeut och erbjuder massage, koppning och holistiska behandlingar i Stockholm och Östersund.
             </p>
             <p className="mt-4 max-w-[46ch] text-base leading-relaxed text-stone-700">
-              Mitt fokus är att hjälpa dig minska stress, spänningar och smärta genom behandlingar som ser till hela kroppen i Stockholm och Östersund.
+              Före varje behandling pratar vi om hur kroppen känns och om det är något särskilt område du vill att jag fokuserar på.
             </p>
             <p className="mt-6 inline-flex max-w-fit items-center rounded-full border border-[rgba(198,164,108,0.32)] bg-[rgba(212,163,115,0.12)] px-4 py-2 text-sm font-medium tracking-[0.02em] text-[#d6c2a8] sm:text-base">
               Stockholm &amp; Östersund
@@ -92,7 +92,7 @@ export default function AboutPage() {
 
         <section className="floating-section floating-section-soft px-3 py-12 sm:px-6 sm:py-14 lg:px-8">
           <p className="text-sm uppercase tracking-[0.18em] text-stone-600">Min historia</p>
-          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Min resa började</h2>
+          <h2 className="mt-2 text-2xl font-semibold text-stone-900">Efter olyckan 2006</h2>
 
           <div className="mt-8 space-y-5 text-sm leading-7 text-stone-700">
             <p>
@@ -115,11 +115,11 @@ export default function AboutPage() {
             </p>
 
             <p>
-              Men någonstans där började också en ny resa. En resa där jag började lyssna på kroppen – på riktigt. Steg för steg, med tålamod och nyfikenhet, började jag hitta vägar tillbaka. Inte genom snabba lösningar, utan genom att arbeta med kroppen som en helhet.
+              Där började jag försöka förstå kroppen på ett nytt sätt. Steg för steg sökte jag kunskap om vad som kunde hjälpa mig vidare.
             </p>
 
             <p>
-              Började studera anatomi, fysiologi, kinesisk medicin, ayurveda, yogalärareutbildning, näringslära, örter, kroppens uppbyggnad och hur allt hänger samman.
+              Jag började studera anatomi, fysiologi, kinesisk medicin, ayurveda, näringslära, örter och kroppens uppbyggnad. Jag gick också en yogalärarutbildning.
             </p>
 
             <p className="text-base font-semibold text-stone-900">
@@ -135,11 +135,11 @@ export default function AboutPage() {
             </p>
 
             <p className="italic text-stone-800">
-              Och jag vet att det går att hitta tillbaka.
+              Den erfarenheten finns med i hur jag möter andra idag.
             </p>
 
             <p>
-              Det är därför jag gör det jag gör idag — för att hjälpa dig förstå din kropp, hitta balans och skapa verklig förändring i Stockholm och Östersund.
+              Det är en viktig del av varför jag arbetar med behandlingar idag.
             </p>
           </div>
         </section>
@@ -196,15 +196,15 @@ export default function AboutPage() {
             <ul className="mt-4 space-y-3 text-base text-stone-700">
               <li className="flex gap-3">
                 <span className="text-stone-900 font-semibold">•</span>
-                <span>Holistiskt synsätt</span>
+                <span>Samtal före behandlingen</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-stone-900 font-semibold">•</span>
-                <span>Anpassat efter din dagsform</span>
+                <span>Tryck och metod anpassas efter dagsform</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-stone-900 font-semibold">•</span>
-                <span>Fokus på orsak, inte bara symptom</span>
+                <span>Fokus på de områden vi kommer överens om</span>
               </li>
             </ul>
           </article>
@@ -235,12 +235,12 @@ export default function AboutPage() {
         </section>
 
         <section className="floating-section floating-section-alt px-3 py-12 text-center sm:px-6 sm:py-14 lg:px-8">
-          <p className="text-sm uppercase tracking-[0.18em] text-stone-300">Nästa steg</p>
+          <p className="text-sm uppercase tracking-[0.18em] text-stone-300">Bokning</p>
           <h2 className="mx-auto mt-3 max-w-[24ch] text-3xl font-semibold text-[#f5f1eb] leading-tight">
-            Redo att lyssna på din kropp?
+            Vill du boka en behandling?
           </h2>
           <p className="mx-auto mt-4 max-w-[52ch] text-base leading-relaxed text-stone-300">
-            Ta första steget mot balans med en behandling som utgår från dig och dina behov, oavsett om du bokar i Stockholm eller i Östersund.
+            Skicka ett sms via knappen nedan, så återkommer jag med lediga tider i Stockholm eller Östersund.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <TrackedLink

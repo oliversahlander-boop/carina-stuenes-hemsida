@@ -54,8 +54,8 @@ export default function ContactPage() {
         <p className="text-sm uppercase tracking-[0.2em] text-stone-600">Kontakt</p>
         <h1 className="mt-3 text-4xl font-semibold text-stone-900">Boka tid eller skicka en fråga</h1>
         <p className="mt-4 max-w-2xl text-stone-700">
-          Du är välkommen att höra av dig om du vill boka en tid eller bara vill stämma av vad som skulle passa dig bäst i Stockholm och Östersund.{" "}
-          Inte säker på vilken behandling du vill ha?{" "}
+          Hör gärna av dig om du vill boka en tid eller fråga om en behandling i Stockholm eller Östersund.{" "}
+          Är du osäker på vad du ska boka?{" "}
           <Link href="/tjanster" className="font-semibold text-[#c6a46c] transition-colors hover:text-[#d4a373]">
             Se alla behandlingar här
           </Link>
@@ -92,7 +92,7 @@ export default function ContactPage() {
       <section className="mt-10">
         <CtaBand
           title="Hjälper gärna till"
-          text="Skicka en förfrågan så svarar vi med förslag på tid och upplägg i Stockholm och Östersund."
+          text="Skicka en förfrågan så återkommer jag med förslag på lediga tider."
         />
       </section>
     </div>

@@ -35,24 +35,22 @@ export default function IrLjusBehandlingPage() {
       <section className="floating-section px-4 py-12 sm:px-6 sm:py-14 lg:px-8">
         <p className="text-sm uppercase tracking-[0.2em] text-stone-600">Behandling</p>
         <h1 className="mt-3 max-w-[22ch] text-3xl font-semibold leading-tight text-stone-900 sm:text-4xl">
-          IR-ljus behandling i Stockholm och Östersund
+          IR-ljusbehandling i Stockholm och Östersund
         </h1>
         <p className="mt-6 max-w-3xl text-base leading-relaxed text-stone-700 sm:text-lg">
-          Infrarött ljus används som stöd för kroppens återhämtning och för att ge värme djupt in i vävnaderna i Stockholm och Östersund.
+          IR-ljusbehandling använder infrarött ljus för att ge värme och används som ett komplement till andra behandlingar.
         </p>
         <p className="mt-4 max-w-3xl text-base leading-relaxed text-stone-700">
-          IR-ljus används ofta som ett komplement i behandling för att ge kroppen extra stöd.
+          IR-ljus kan ingå som en del av en annan behandling.
         </p>
       </section>
 
       <section className="mt-10 max-w-3xl lg:ml-6">
         <article className="rounded-2xl border border-[rgba(198,164,108,0.18)] bg-[rgba(198,164,108,0.035)] px-6 py-8 sm:px-7 sm:py-9">
-          <h2 className="text-2xl font-semibold text-stone-900">Det kan bidra till</h2>
+          <h2 className="text-2xl font-semibold text-stone-900">Om behandlingen</h2>
           <ul className="mt-6 list-disc space-y-2.5 pl-6 leading-relaxed text-stone-700 marker:text-[rgba(198,164,108,0.95)]">
-            <li>Ökad cirkulation</li>
-            <li>Avslappning</li>
-            <li>Stöd för muskler och vävnader</li>
-            <li>Lindring vid stelhet och spänningar</li>
+            <li>Ger värme i området som behandlas</li>
+            <li>Används som komplement till annan behandling</li>
           </ul>
           <p className="mt-6 leading-relaxed text-stone-700">
             Behandlingen erbjuds i Stockholm och Östersund.
@@ -61,9 +59,9 @@ export default function IrLjusBehandlingPage() {
       </section>
 
       <section className="mt-14 max-w-3xl border-t border-[rgba(198,164,108,0.16)] pt-10 lg:ml-6">
-        <h2 className="text-2xl font-semibold text-stone-900">Boka IR-ljus behandling</h2>
+        <h2 className="text-2xl font-semibold text-stone-900">Boka IR-ljusbehandling</h2>
         <p className="mt-4 max-w-2xl leading-relaxed text-stone-700">
-          Hör av dig så hittar vi en tid och ett upplägg som passar dig i Stockholm och Östersund.
+          Skicka ett sms, så återkommer jag med lediga tider.
         </p>
         <div className="mt-7 flex flex-wrap gap-4">
           <TrackedLink

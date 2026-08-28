@@ -68,8 +68,7 @@ export default function ServicesPage() {
         <p className="text-sm uppercase tracking-[0.2em] text-stone-600">Tjänster</p>
         <h1 className="mt-4 text-4xl font-semibold leading-tight text-stone-900 sm:text-5xl">Massage, koppning &amp; kroppsterapi i Stockholm och Östersund</h1>
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-stone-700 sm:text-lg">
-          Här hittar du behandlingar för både kropp och återhämtning i Stockholm och Östersund.
-          Alla behandlingar anpassas efter hur du mår just nu och vad din kropp behöver.
+          Här kan du läsa om behandlingarna jag erbjuder i Stockholm och Östersund och se vilka längder som går att boka.
         </p>
       </section>
 
@@ -80,13 +79,13 @@ export default function ServicesPage() {
               <h2 className="text-2xl font-semibold text-stone-900 sm:text-3xl">Massage</h2>
               <p className="mt-3 text-lg text-stone-700">30 min · 60 min · 90 min</p>
               <p className="mt-6 max-w-xl leading-relaxed text-stone-700">
-                Massage för dig som vill släppa på spänningar, öka cirkulationen och ge kroppen ny energi i Stockholm och Östersund.
+                I Stockholm och Östersund kan du boka djupgående behandlande massage eller avslappnande massage i 30, 60 eller 90 minuter.
               </p>
               <Link
                 href="/massage-stockholm"
                 className="mt-5 inline-flex text-sm font-semibold uppercase tracking-[0.16em] text-[#c6a46c] transition-colors hover:text-[#d4a373]"
               >
-                Visa behandling
+                Läs om massage
               </Link>
               <p className="mt-5 max-w-xl leading-relaxed text-stone-700">Du kan välja mellan:</p>
               <ul className="mt-4 space-y-4 border-l border-[rgba(198,164,108,0.35)] pl-5">
@@ -123,7 +122,7 @@ export default function ServicesPage() {
 
       <section className="mx-auto max-w-xl py-24 text-center sm:py-28">
         <p className="text-base leading-relaxed text-stone-600 sm:text-lg">
-          Behandlingarna formas med lugn och närvaro, utifrån din dagsform och det kroppen behöver just nu.
+          Vi pratar kort före behandlingen om hur kroppen känns och om du vill ha fokus på något särskilt område.
         </p>
       </section>
 
@@ -132,18 +131,17 @@ export default function ServicesPage() {
           <h2 className="text-2xl font-semibold text-stone-900 sm:text-3xl">Koppning</h2>
           <p className="mt-3 text-lg text-stone-700">30 min · 60 min · 90 min</p>
           <p className="mt-6 max-w-2xl leading-relaxed text-stone-700">
-            Koppning är en djupgående behandling där bindväven lyfts med hjälp av vakuum från kopparna.
-            Det kan bidra till ökad cirkulation, aktivering av lymfsystemet och hjälpa kroppen att släppa
-            på stagnationer och spänningar.
+            Koppning är en djupgående behandling där koppar skapar ett vakuum som lyfter bindväven.
+            Den används för att arbeta med stela eller spända områden.
           </p>
           <p className="mt-5 max-w-2xl leading-relaxed text-stone-700">
-            Behandlingen passar dig som vill arbeta mer på djupet och ge kroppen stöd i sin återhämtning i Stockholm och Östersund.
+            Jag erbjuder koppning i Stockholm och Östersund. Intensiteten anpassas efter hur kroppen känns vid besöket.
           </p>
           <Link
             href="/koppning-stockholm"
             className="mt-5 inline-flex text-sm font-semibold uppercase tracking-[0.16em] text-[#c6a46c] transition-colors hover:text-[#d4a373]"
           >
-            Visa behandling
+            Läs om koppning
           </Link>
         </article>
 
@@ -151,49 +149,45 @@ export default function ServicesPage() {
           <h2 className="text-2xl font-semibold text-stone-900 sm:text-3xl">Biomagnetisk behandling</h2>
           <p className="mt-3 text-lg text-stone-700">45-60 min</p>
           <p className="mt-6 max-w-2xl leading-relaxed text-stone-700">
-            Biomagnetisk behandling är en metod där magneter placeras på specifika områden på kroppen med
-            syftet att stödja kroppens balans.
+            Vid en biomagnetisk behandling placeras magneter på olika områden på kroppen.
           </p>
           <p className="mt-5 max-w-2xl leading-relaxed text-stone-700">
-            Behandlingen sker liggande på bänk och används som en lugn, terapeutisk metod för dig som vill
-            arbeta mer holistiskt med kroppens inre återhämtning i Stockholm och Östersund.
+            Du ligger på en bänk under behandlingen, som tar 45–60 minuter. Biomagnetisk behandling går att boka i Stockholm och Östersund.
           </p>
           <Link
             href="/biomagnetisk-behandling"
             className="mt-5 inline-flex text-sm font-semibold uppercase tracking-[0.16em] text-[#c6a46c] transition-colors hover:text-[#d4a373]"
           >
-            Visa behandling
+            Läs om biomagnetisk behandling
           </Link>
         </article>
       </section>
 
       <section className="max-w-lg py-24 text-left sm:py-28 lg:ml-24">
         <p className="text-sm leading-relaxed text-stone-600 sm:text-base">
-          En stilla mellanpunkt där behandling och återhämtning möts i ett tempo som får vara ditt.
+          Är du osäker på vad du ska boka får du gärna höra av dig först.
         </p>
       </section>
 
       <section className="max-w-3xl lg:ml-6">
         <article>
-          <h2 className="text-2xl font-semibold text-stone-900 sm:text-3xl">IR - Infrarött ljus</h2>
+          <h2 className="text-2xl font-semibold text-stone-900 sm:text-3xl">IR-ljusbehandling</h2>
           <p className="mt-6 max-w-2xl leading-relaxed text-stone-700">
-            Infrarött ljus används som stöd för kroppens återhämtning och för att ge värme djupt in i vävnaderna.
+            IR-ljusbehandling använder infrarött ljus för att ge värme och används som ett komplement till andra behandlingar.
           </p>
-          <p className="mt-5 max-w-2xl leading-relaxed text-stone-700">Det kan bidra till:</p>
+          <p className="mt-5 max-w-2xl leading-relaxed text-stone-700">Behandlingen:</p>
           <ul className="mt-4 list-disc space-y-2.5 pl-6 leading-relaxed text-stone-700 marker:text-[rgba(198,164,108,0.95)]">
-            <li>ökad cirkulation</li>
-            <li>avslappning</li>
-            <li>stöd för muskler och vävnader</li>
-            <li>lindring vid stelhet och spänningar</li>
+            <li>ger värme i området som behandlas</li>
+            <li>kan ingå som en del av en annan behandling</li>
           </ul>
           <p className="mt-5 max-w-2xl leading-relaxed text-stone-700">
-            IR-ljus används ofta som ett komplement i behandling för att ge kroppen extra stöd.
+            Du kan också boka IR-ljus som en egen behandling.
           </p>
           <Link
             href="/ir-ljus-behandling"
             className="mt-5 inline-flex text-sm font-semibold uppercase tracking-[0.16em] text-[#c6a46c] transition-colors hover:text-[#d4a373]"
           >
-            Visa behandling
+            Läs om IR-ljusbehandling
           </Link>
         </article>
 
@@ -201,7 +195,7 @@ export default function ServicesPage() {
           <h2 className="text-2xl font-semibold text-stone-900 sm:text-3xl">Mixad behandling</h2>
           <p className="mt-3 text-lg text-stone-700">60 min · 90 min</p>
           <p className="mt-6 max-w-2xl leading-relaxed text-stone-700">
-            En kombinationsbehandling för dig som vill ha ett mer helhetsanpassat upplägg.
+            En behandling där flera metoder kan kombineras under samma besök.
           </p>
           <p className="mt-5 max-w-2xl leading-relaxed text-stone-700">Behandlingen kan innehålla en kombination av:</p>
           <ul className="mt-4 list-disc space-y-2.5 pl-6 leading-relaxed text-stone-700 marker:text-[rgba(198,164,108,0.95)]">
@@ -211,7 +205,7 @@ export default function ServicesPage() {
             <li>gua sha</li>
           </ul>
           <p className="mt-5 max-w-2xl leading-relaxed text-stone-700">
-            Vi väljer det som passar dig bäst utifrån hur du mår just den dagen.
+            Jag väljer metoder tillsammans med dig före behandlingen.
           </p>
         </article>
       </section>
@@ -227,16 +221,16 @@ export default function ServicesPage() {
           <li>behandlingskort 1 timme (5 eller 10 gånger) - ett kort för en behandling i en timme, som kan nyttjas 5 eller 10 gånger</li>
           <li>presentkort eller värdebevis</li>
         </ul>
-        <p className="mt-5 max-w-2xl leading-relaxed text-stone-700">För att köpa presentkort, hör av dig till oss.</p>
+        <p className="mt-5 max-w-2xl leading-relaxed text-stone-700">För att köpa presentkort, hör av dig till mig.</p>
         <TrackedLink
           href="/kontakt"
           eventName="contact_click"
           eventSource="services_gift_card_contact"
           className="mt-4 inline-flex text-sm font-semibold uppercase tracking-[0.16em] text-[#c6a46c] transition-colors hover:text-[#d4a373]"
         >
-          Kontakta oss för presentkort
+          Kontakta mig för presentkort
         </TrackedLink>
-        <p className="mt-5 max-w-2xl leading-relaxed text-stone-700">Perfekt både för dig själv eller som gåva.</p>
+        <p className="mt-5 max-w-2xl leading-relaxed text-stone-700">Presentkortet kan användas av dig själv eller ges bort.</p>
       </section>
 
       <section className="mt-24 max-w-4xl border-t border-[rgba(198,164,108,0.16)] pt-12 sm:pt-14 lg:ml-6">
@@ -244,8 +238,7 @@ export default function ServicesPage() {
           <article>
             <h2 className="text-2xl font-semibold text-stone-900 sm:text-3xl">Osäker på vad som passar dig?</h2>
             <p className="mt-4 max-w-2xl leading-relaxed text-stone-700">
-              Om du har funderingar eller är osäker på vilken behandling som passar bäst, är du alltid välkommen
-              att höra av dig så tittar vi på det tillsammans.
+              Hör av dig och berätta kort vad du söker hjälp med, så hjälper jag dig att välja behandling.
             </p>
             <div className="mt-6 flex flex-wrap gap-5">
               <Link
@@ -273,7 +266,7 @@ export default function ServicesPage() {
 
           <article className="rounded-xl border border-[rgba(198,164,108,0.18)] bg-[rgba(198,164,108,0.025)] px-4 py-5 sm:px-5 sm:py-6">
             <h2 className="text-2xl font-semibold text-stone-900">Boka tid</h2>
-            <p className="mt-3 leading-relaxed text-stone-700">En stund för dig, där kroppen får ta plats.</p>
+            <p className="mt-3 leading-relaxed text-stone-700">Skicka ett sms, så återkommer jag med lediga tider.</p>
             <TrackedLink
               href={company.bookingUrl}
               eventName="booking_click"

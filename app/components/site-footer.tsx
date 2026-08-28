@@ -112,7 +112,7 @@ export function SiteFooter() {
                 eventName="contact_click"
                 eventSource="footer_contact"
               >
-                Kontakta oss →
+                Kontakta mig →
               </TrackedLink>
             </li>
           </ul>

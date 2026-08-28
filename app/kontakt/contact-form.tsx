@@ -153,7 +153,7 @@ export function ContactForm() {
 
       <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-xs leading-relaxed text-stone-500">
-          Genom att skicka formuläret godkänner du att vi kontaktar dig för bokning.
+          Genom att skicka formuläret godkänner du att jag kontaktar dig om din förfrågan.
         </p>
         <button type="submit" disabled={submitState === "sending"} className="btn-primary w-full justify-center disabled:opacity-70 sm:w-auto">
           {submitState === "sending" ? "Skickar..." : "Skicka förfrågan"}

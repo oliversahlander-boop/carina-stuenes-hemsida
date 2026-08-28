@@ -58,7 +58,7 @@ export default function FaqPage() {
         <p className="mt-4 max-w-2xl text-stone-700">
           Här hittar du svar på vanliga frågor om behandlingar och bokning i Stockholm och Östersund.{" "}
           Vill du veta mer om{" "}
-          <Link href="/tjanster" className="font-semibold text-[#c6a46c] transition-colors hover:text-[#d4a373]">våra behandlingar</Link>
+          <Link href="/tjanster" className="font-semibold text-[#c6a46c] transition-colors hover:text-[#d4a373]">behandlingarna</Link>
           {" "}eller{" "}
           <Link href="/om-oss" className="font-semibold text-[#c6a46c] transition-colors hover:text-[#d4a373]">vem jag är</Link>
           {" "}hittar du det i menyn.
@@ -79,7 +79,7 @@ export default function FaqPage() {
       <section className="mt-10">
         <CtaBand
           title="Har du fler frågor?"
-          text="Om du funderar på något är det bara att höra av dig, så svarar vi så gott vi kan för bokning i Stockholm och Östersund."
+          text="Hör gärna av dig om du undrar över en behandling eller vill ha hjälp inför bokningen."
         />
       </section>
     </div>

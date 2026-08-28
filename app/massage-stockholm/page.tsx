@@ -39,7 +39,7 @@ export default function MassageStockholmPage() {
           Massage i Stockholm och Östersund
         </h1>
         <p className="mt-6 max-w-3xl text-base leading-relaxed text-stone-700 sm:text-lg">
-          Massage för dig som vill släppa på spänningar, öka cirkulationen och ge kroppen ny energi i Stockholm och Östersund.
+          Du kan boka djupgående behandlande massage eller avslappnande massage i Stockholm och Östersund.
         </p>
         <p className="mt-4 max-w-3xl text-base leading-relaxed text-stone-700">
           Du kan välja mellan djupgående behandlande massage och avslappnande massage,
@@ -80,7 +80,7 @@ export default function MassageStockholmPage() {
       <section className="mt-14 max-w-3xl border-t border-[rgba(198,164,108,0.16)] pt-10 lg:ml-6">
         <h2 className="text-2xl font-semibold text-stone-900">Boka massage</h2>
         <p className="mt-4 max-w-2xl leading-relaxed text-stone-700">
-          Hör av dig så hittar vi en tid och ett upplägg som passar dig i Stockholm och Östersund.
+          Skicka ett sms, så återkommer jag med lediga tider.
         </p>
         <div className="mt-7 flex flex-wrap gap-4">
           <TrackedLink

@@ -135,12 +135,12 @@ export const faqs = [
   {
     question: "Hur bokar jag en tid?",
     answer:
-      "Det enklaste är att klicka på \"Boka tid\" och skicka ett sms. Du kan också använda kontaktformuläret, så återkommer vi med lediga tider.",
+      "Klicka på \"Boka tid\" och skicka ett sms. Du kan också använda kontaktformuläret, så återkommer jag med lediga tider.",
   },
   {
     question: "Vilka behandlingar kan jag boka?",
     answer:
-      "Du kan boka massage, koppning, biomagnetisk behandling, IR-ljus och mixad behandling. Är du osäker hjälper vi dig att välja rätt.",
+      "Du kan boka massage, koppning, biomagnetisk behandling, IR-ljus och mixad behandling. Är du osäker får du gärna höra av dig, så hjälper jag dig att välja.",
   },
   {
     question: "Hur lång är en behandling?",
@@ -150,36 +150,36 @@ export const faqs = [
   {
     question: "Hur vet jag vilken behandling som passar mig?",
     answer:
-      "Du behöver inte veta det på förhand. Vi börjar med att prata om hur du mår, så hittar vi en behandling som känns rätt för dig.",
+      "Är du osäker går det bra att höra av dig före bokningen. Jag hjälper dig att välja utifrån vad du söker hjälp med.",
   },
   {
     question: "Kan jag köpa presentkort eller behandlingskort?",
     answer:
-      "Ja. Du kan köpa presentkort, värdebevis och behandlingskort för 1 timme (5 eller 10 gånger). Hör av dig via kontaktformuläret så hjälper vi dig.",
+      "Ja. Det finns presentkort, värdebevis och behandlingskort för 1 timme (5 eller 10 gånger). Hör av dig via kontaktformuläret så hjälper jag dig.",
   },
   {
-    question: "Erbjuder ni behandling på plats hos företag?",
+    question: "Går det att boka behandling på ett företag?",
     answer:
-      "Ja. Vi kan komma ut till företag och grupper när det passar bättre att ses på plats hos er.",
+      "Ja. Jag kan komma ut till företag och grupper i Stockholm och Östersund för behandling på plats.",
   },
   {
     question: "Vad kostar massage i Stockholm?",
     answer:
-      "Behandlingar börjar från 395 kr beroende på längd och upplägg. Jag erbjuder massage i Stockholm och Östersund i 30, 60 och 90 minuter. Hör av dig så går vi igenom vad som passar dig.",
+      "Behandlingar kostar från 395 kr beroende på längd och upplägg. Massage går att boka i 30, 60 eller 90 minuter.",
   },
   {
     question: "Hur ofta bör man gå på massage?",
     answer:
-      "Det beror på vad du vill uppnå. För återhämtning och stresshantering kan en gång i månaden räcka. Vid mer specifika spänningar eller smärta kan tätare behandlingar ge bättre resultat. Vi hittar ett upplägg som fungerar för dig.",
+      "Det beror på varför du bokar och hur kroppen reagerar på behandlingen. Är du osäker kan du fråga mig i samband med ditt besök.",
   },
   {
     question: "Hjälper koppning mot stress?",
     answer:
-      "Ja, koppning kan bidra till att kroppen slappnar av och att spänningar löses upp. Behandlingen stimulerar cirkulationen och lymfsystemet, vilket kan ha en lugnande och återhämtande effekt. Koppning erbjuds i Stockholm och Östersund.",
+      "Koppning är en djupgående behandling som arbetar med bindväven med hjälp av vakuum. Om du främst söker avslappning får du gärna fråga mig om koppning eller massage passar bäst.",
   },
   {
     question: "Vad är biomagnetisk behandling?",
     answer:
-      "Biomagnetisk behandling är en metod där magneter placeras på specifika punkter på kroppen för att stödja kroppens naturliga balans. Behandlingen sker liggande och är lugn och skonsam. Den erbjuds i Stockholm och Östersund som ett holistiskt komplement.",
+      "Vid en biomagnetisk behandling ligger du på en bänk medan magneter placeras på olika områden på kroppen. Behandlingen tar 45–60 minuter.",
   },
 ];

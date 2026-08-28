@@ -73,16 +73,16 @@ export default function Home() {
         <div className="content-shell relative z-10 py-24 sm:py-32 lg:py-40">
           <div className="max-w-[44rem] pr-4 lg:pr-14">
             <p className="hero-fade text-xs uppercase tracking-[0.28em] text-[#d1baa0] sm:text-sm">
-              HOLISTISK HÄLSA & VÄLMÅENDE
+              MASSAGE &amp; KROPPSBEHANDLINGAR
             </p>
             <h1 className="hero-fade mt-8 max-w-[18ch] text-3xl font-semibold leading-[1.08] text-[#f5f1eb] [animation-delay:120ms] sm:text-4xl lg:text-6xl">
-              Behandlingar som ser hela dig — inte bara symtomen
+              Behandling utifrån hur kroppen känns idag
             </h1>
             <p className="hero-fade mt-10 max-w-[62ch] text-base leading-relaxed text-[#d9c9b5] [animation-delay:240ms] sm:text-lg">
-              Här får du landa, bli lyssnad på och börja förstå din kropp, med behandlingar i Stockholm och Östersund.
+              Jag erbjuder massage, koppning och andra kroppsbehandlingar i Stockholm och Östersund.
             </p>
             <p className="hero-fade mt-4 max-w-[52ch] text-[1.08rem] italic font-medium leading-relaxed text-[#f5f1eb] [animation-delay:300ms] sm:text-xl">
-              Jag möter dig där du är — med lugn, närvaro och omtanke.
+              Vi börjar med ett kort samtal före behandlingen.
             </p>
             <div className="hero-fade mt-10 flex flex-col gap-3 [animation-delay:360ms] sm:flex-row sm:flex-wrap sm:gap-4">
               <TrackedLink
@@ -105,12 +105,12 @@ export default function Home() {
       </section>
 
       <section id="start-content" className="content-shell floating-section floating-section-warm mt-10 px-4 py-10 sm:mt-14 sm:px-6 sm:py-14 lg:px-8">
-        <h2 className="max-w-[18ch] text-3xl font-semibold !text-[#4b3421]">Här ser jag hela dig — inte bara det som gör ont.</h2>
+        <h2 className="max-w-[18ch] text-3xl font-semibold !text-[#4b3421]">Behandlingen börjar med att jag lyssnar</h2>
         <p className="mt-6 max-w-[70ch] text-base leading-relaxed text-[#5c4632] sm:text-lg">
-          Jag arbetar utifrån ett holistiskt perspektiv där kropp, tanke och livssituation hänger ihop. Med bred erfarenhet och genuint engagemang anpassar jag varje behandling efter din dagsform och dina behov i Stockholm och Östersund.
+          Före behandlingen pratar vi kort om hur du mår och om det är något område du vill att jag fokuserar på. Sedan väljer jag arbetssätt utifrån det du berättar och hur kroppen känns den dagen.
         </p>
         <p className="mt-4 max-w-[52ch] text-[1.02rem] leading-relaxed text-[#6a513a] sm:text-lg">
-          Ingen behandling är den andra lik — för ingen människa är det.
+          Det kan vara massage, koppning eller en kombination av flera metoder.
         </p>
         <div className="mt-12">
           <div className="mx-auto flex w-full max-w-3xl items-center justify-center rounded-3xl border border-[rgba(159,125,84,0.28)] bg-[linear-gradient(180deg,rgba(245,235,223,0.82),rgba(231,218,199,0.82))] px-5 py-5 sm:px-7">
@@ -120,7 +120,7 @@ export default function Home() {
               eventSource="home_intro_contact"
               className="btn-primary w-full justify-center text-sm uppercase tracking-[0.16em] transition-all duration-300 hover:scale-[1.02] sm:w-auto"
             >
-              KONTAKTA OSS
+              KONTAKTA MIG
             </TrackedLink>
           </div>
         </div>
@@ -141,13 +141,13 @@ export default function Home() {
             </p>
             <div className="mt-8 border-l border-[rgba(198,164,108,0.38)] pl-5">
               <h3 className="text-xl font-semibold text-[#f5f1eb]">
-                Massage i Stockholm och Östersund
+                Massage och kroppsterapi
               </h3>
               <p className="mt-4 max-w-4xl text-base leading-relaxed text-[#d9c9b5] sm:text-lg">
-                Jag erbjuder massage, kroppsterapi och holistiska behandlingar i Stockholm och Östersund för dig som vill minska spänningar, släppa stress och ge kroppen bättre återhämtning. Behandlingen kan innehålla klassisk massage, djupgående massage, koppning, biomagnetism, andning eller mindfulness beroende på vad du behöver.
+                Jag erbjuder massage och kroppsterapi i Stockholm och Östersund. En behandling kan innehålla klassisk massage, djupgående massage, koppning, biomagnetism, andning eller mindfulness.
               </p>
               <p className="mt-4 max-w-4xl text-base leading-relaxed text-[#a89880] sm:text-lg">
-                Oavsett om du söker massage i Stockholm, massage i Östersund eller en personlig behandling med fokus på helheten, möter jag dig med närvaro, erfarenhet och ett arbetssätt som anpassas efter din kropp.
+                Vilka metoder jag använder beror på vad du bokar och vad vi kommer fram till före behandlingen.
               </p>
             </div>
           </div>
@@ -171,7 +171,7 @@ export default function Home() {
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
           <h2 className="text-3xl font-semibold !text-[#5f4933]">Tjänster</h2>
           <p className="max-w-[34ch] text-sm leading-relaxed text-[#5f4933] sm:text-right">
-            Jag erbjuder olika tjänster för både kropp och välmående i Stockholm och Östersund — alltid anpassat efter hur du mår just idag.
+            På Health Stuenes erbjuder jag behandlingar och övningar i Stockholm och Östersund.
           </p>
         </div>
         <div className="mt-8 grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">
@@ -184,7 +184,7 @@ export default function Home() {
               <li>• Kostrådgivning</li>
             </ul>
             <p className="text-base leading-relaxed text-[#5f4933]">
-              Är du osäker på vad som passar dig, är du alltid välkommen att höra av dig så tittar vi på det tillsammans.
+              Är du osäker på vad du ska boka får du gärna höra av dig först.
             </p>
           </div>
 
@@ -224,9 +224,9 @@ export default function Home() {
                 <path d="M12 21c4.97-2.76 8-6.32 8-10a4 4 0 0 0-7.3-2.25L12 9.5l-.7-.75A4 4 0 0 0 4 11c0 3.68 3.03 7.24 8 10Z" />
               </svg>
             </span>
-            <h3 className="text-xl font-semibold">Holistiskt synsätt</h3>
+            <h3 className="text-xl font-semibold">Samtal före behandlingen</h3>
             <p className="text-sm leading-relaxed text-[#a89880]">
-              Här tittar vi inte bara på var det gör ont, utan på hur du mår som helhet.
+              Du får berätta hur kroppen känns och om det är något särskilt område jag ska fokusera på.
             </p>
           </article>
 
@@ -237,9 +237,9 @@ export default function Home() {
                 <path d="M4 20a8 8 0 0 1 16 0" />
               </svg>
             </span>
-            <h3 className="text-xl font-semibold">Personlig vägledning</h3>
+            <h3 className="text-xl font-semibold">Behandling efter dagsform</h3>
             <p className="text-sm leading-relaxed text-[#a89880]">
-              Du blir lyssnad på från start och behandlingen formas efter hur du mår just idag.
+              Tryck och arbetssätt anpassas efter hur kroppen känns vid besöket.
             </p>
           </article>
 
@@ -250,9 +250,9 @@ export default function Home() {
                 <path d="M9 4v2a3 3 0 0 1-.88 2.12L6 10.24A3 3 0 0 0 5.12 12L5 20h14l-.12-8a3 3 0 0 0-.88-1.76l-2.12-2.12A3 3 0 0 1 15 6V4" />
               </svg>
             </span>
-            <h3 className="text-xl font-semibold">Anpassade behandlingar</h3>
+            <h3 className="text-xl font-semibold">Flera metoder</h3>
             <p className="text-sm leading-relaxed text-[#a89880]">
-              Ibland är det massage, ibland koppning eller en kombination. Vi hittar det som passar dig.
+              Beroende på bokning kan behandlingen innehålla massage, koppning eller en kombination.
             </p>
           </article>
         </div>
@@ -260,10 +260,9 @@ export default function Home() {
 
       <section className="content-shell floating-section floating-section-alt mt-10 px-4 py-10 sm:mt-16 sm:px-6 sm:py-14 lg:px-8">
         <div className="py-8 text-center sm:py-10">
-          <h2 className="text-2xl font-semibold sm:text-3xl">Ge dig själv en stund av lugn</h2>
+          <h2 className="text-2xl font-semibold sm:text-3xl">Vill du boka en behandling?</h2>
           <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-[#a89880]">
-            En behandling är ett tillfälle att andas, landa och komma i kontakt med sig själv.
-            Du väljer takt och riktning.
+            Skicka ett sms via knappen nedan, så återkommer jag med lediga tider.
           </p>
           <TrackedLink
             href={company.bookingUrl}
