@@ -47,7 +47,7 @@ const faqJsonLd = {
 
 export default function FaqPage() {
   return (
-    <div className="content-shell pb-16 pt-10">
+    <div className="editorial-page faq-page content-shell pb-16 pt-10">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}

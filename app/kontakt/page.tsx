@@ -44,7 +44,7 @@ const contactJsonLd = {
 
 export default function ContactPage() {
   return (
-    <div className="content-shell pb-16 pt-10">
+    <div className="editorial-page contact-page content-shell pb-16 pt-10">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactJsonLd) }}

@@ -58,7 +58,7 @@ const servicesJsonLd = {
 
 export default function ServicesPage() {
   return (
-    <div className="content-shell pb-24 pt-12 sm:pb-28 lg:pb-32">
+    <div className="editorial-page services-page content-shell pb-24 pt-12 sm:pb-28 lg:pb-32">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesJsonLd) }}

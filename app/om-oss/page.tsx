@@ -51,7 +51,7 @@ const aboutJsonLd = {
 
 export default function AboutPage() {
   return (
-    <div className="content-shell pb-20 pt-12">
+    <div className="editorial-page about-page content-shell pb-20 pt-12">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}

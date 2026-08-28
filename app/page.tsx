@@ -55,7 +55,7 @@ const homeJsonLd = {
 
 export default function Home() {
   return (
-    <div className="pb-20">
+    <div className="home-page pb-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
@@ -177,11 +177,11 @@ export default function Home() {
         <div className="mt-8 grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">
           <div className="max-w-3xl space-y-6">
             <ul className="space-y-3 border-l border-[rgba(159,125,84,0.45)] pl-4 text-base text-[#4b3421]">
-              <li>• Massage & kroppsterapi</li>
-              <li>• Koppning & biomagnetism</li>
-              <li>• Ansiktsbehandlingar</li>
-              <li>• Andning & mindfulness</li>
-              <li>• Kostrådgivning</li>
+              <li><span aria-hidden>•</span><span>Massage & kroppsterapi</span></li>
+              <li><span aria-hidden>•</span><span>Koppning & biomagnetism</span></li>
+              <li><span aria-hidden>•</span><span>Ansiktsbehandlingar</span></li>
+              <li><span aria-hidden>•</span><span>Andning & mindfulness</span></li>
+              <li><span aria-hidden>•</span><span>Kostrådgivning</span></li>
             </ul>
             <p className="text-base leading-relaxed text-[#5f4933]">
               Är du osäker på vad du ska boka får du gärna höra av dig först.

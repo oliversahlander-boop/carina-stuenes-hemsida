@@ -26,7 +26,7 @@ const serviceJsonLd = {
 
 export default function BiomagnetiskBehandlingPage() {
   return (
-    <div className="content-shell pb-24 pt-12 sm:pb-28 lg:pb-32">
+    <div className="editorial-page treatment-page content-shell pb-24 pt-12 sm:pb-28 lg:pb-32">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
