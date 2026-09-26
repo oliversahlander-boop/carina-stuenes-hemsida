@@ -4,6 +4,10 @@ create table if not exists public.analytics_events (
   name text not null check (name in ('page_view', 'booking_click', 'contact_click')),
   path text not null check (char_length(path) between 1 and 140),
   source text not null check (char_length(source) between 1 and 140),
+  visitor_id uuid,
+  session_id uuid,
+  referrer text,
+  device_type text,
   created_at timestamptz not null default now()
 );
 
@@ -12,6 +16,14 @@ create index if not exists analytics_events_created_at_idx
 
 create index if not exists analytics_events_name_idx
   on public.analytics_events (name);
+
+alter table public.analytics_events add column if not exists visitor_id uuid;
+alter table public.analytics_events add column if not exists session_id uuid;
+alter table public.analytics_events add column if not exists referrer text;
+alter table public.analytics_events add column if not exists device_type text;
+
+create index if not exists analytics_events_visitor_id_idx on public.analytics_events (visitor_id);
+create index if not exists analytics_events_session_id_idx on public.analytics_events (session_id);
 
 alter table public.analytics_events enable row level security;
 

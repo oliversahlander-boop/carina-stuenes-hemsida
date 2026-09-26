@@ -19,6 +19,13 @@ function cleanText(value: unknown, fallback = "") {
   return value.trim().slice(0, 140) || fallback;
 }
 
+function cleanUuid(value: unknown) {
+  const text = cleanText(value);
+  return /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(text)
+    ? text
+    : undefined;
+}
+
 export async function GET() {
   if (!(await hasStatisticsAccess())) {
     return Response.json({ error: "Unauthorized" }, { status: 401 });
@@ -38,6 +45,9 @@ export async function POST(request: NextRequest) {
     name?: unknown;
     path?: unknown;
     source?: unknown;
+    visitorId?: unknown;
+    sessionId?: unknown;
+    referrer?: unknown;
   } | null;
 
   if (!isAnalyticsEventName(payload?.name)) {
@@ -49,6 +59,14 @@ export async function POST(request: NextRequest) {
       name: payload.name,
       path: cleanText(payload.path, request.nextUrl.pathname),
       source: cleanText(payload.source, payload.name),
+      visitorId: cleanUuid(payload.visitorId),
+      sessionId: cleanUuid(payload.sessionId),
+      referrer: cleanText(payload.referrer, "Direkt"),
+      deviceType: /tablet|ipad/i.test(request.headers.get("user-agent") || "")
+        ? "Surfplatta"
+        : /mobile|iphone|android/i.test(request.headers.get("user-agent") || "")
+          ? "Mobil"
+          : "Dator",
       createdAt: new Date().toISOString(),
     });
 

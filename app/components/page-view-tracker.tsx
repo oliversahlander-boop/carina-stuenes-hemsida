@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { getAnalyticsContext } from "../lib/analytics-client";
 
 export function PageViewTracker() {
   const pathname = usePathname();
@@ -15,6 +16,7 @@ export function PageViewTracker() {
       name: "page_view",
       source: pathname,
       path: pathname,
+      ...getAnalyticsContext(),
     });
 
     if (navigator.sendBeacon) {

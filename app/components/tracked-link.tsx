@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import type { AnchorHTMLAttributes, ReactNode } from "react";
+import { getAnalyticsContext } from "../lib/analytics-client";
 
 type TrackedLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   href: string;
@@ -15,6 +16,7 @@ function trackClick(eventName: TrackedLinkProps["eventName"], eventSource: strin
     name: eventName,
     source: eventSource,
     path: window.location.pathname,
+    ...getAnalyticsContext(),
   });
 
   if (navigator.sendBeacon) {
