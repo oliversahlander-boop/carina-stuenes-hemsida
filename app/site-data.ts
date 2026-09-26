@@ -6,8 +6,8 @@ export const company = {
   phoneLink: "tel:+46767402432",
   smsLink:
     "sms:+46767402432?body=Hej%20Carina!%0AJag%20vill%20g%C3%A4rna%20boka%20en%20behandling%20hos%20dig.%20Du%20f%C3%A5r%20g%C3%A4rna%20%C3%A5terkomma%20med%20lediga%20tider%20n%C3%A4r%20du%20har%20m%C3%B6jlighet.",
-  bookingUrl:
-    "sms:+46767402432?body=Hej%20Carina!%0AJag%20vill%20g%C3%A4rna%20boka%20en%20behandling%20hos%20dig.%20Du%20f%C3%A5r%20g%C3%A4rna%20%C3%A5terkomma%20med%20lediga%20tider%20n%C3%A4r%20du%20har%20m%C3%B6jlighet.",
+  bookingUrl: "/boka",
+  externalBookingUrl: "https://www.bokadirekt.se/places/health-stuenes-137792",
 };
 
 export const siteConfig = {
@@ -135,7 +135,7 @@ export const faqs = [
   {
     question: "Hur bokar jag en tid?",
     answer:
-      "Klicka på \"Boka tid\" och skicka ett sms. Du kan också använda kontaktformuläret, så återkommer jag med lediga tider.",
+      "Klicka på \"Boka tid\" för att välja mellan BokaDirekt och kontaktformuläret. Du kan också skicka ett sms.",
   },
   {
     question: "Vilka behandlingar kan jag boka?",

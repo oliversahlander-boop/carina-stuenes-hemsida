@@ -9,6 +9,7 @@ const pages: Array<{ path: string; priority: number; changeFrequency: MetadataRo
   { path: "/biomagnetisk-behandling", priority: 0.9, changeFrequency: "monthly" },
   { path: "/ir-ljus-behandling", priority: 0.9, changeFrequency: "monthly" },
   { path: "/om-oss",   priority: 0.8, changeFrequency: "monthly" },
+  { path: "/boka",     priority: 0.9, changeFrequency: "weekly" },
   { path: "/kontakt",  priority: 0.8, changeFrequency: "monthly" },
   { path: "/faq",      priority: 0.7, changeFrequency: "monthly" },
 ];
