@@ -71,7 +71,7 @@ export default async function StatisticsPage() {
 
       <section className="mt-8 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
         <article className="rounded-2xl border border-[rgba(198,164,108,0.18)] bg-[rgba(198,164,108,0.035)] px-5 py-6">
-          <h2 className="text-2xl font-semibold text-stone-900">Vanligaste klickplatser</h2>
+          <h2 className="text-2xl font-semibold text-stone-900">Vanligaste sidor och klickplatser</h2>
           <div className="mt-5 space-y-3">
             {sourceEntries.length > 0 ? (
               sourceEntries.map(([source, total]) => (

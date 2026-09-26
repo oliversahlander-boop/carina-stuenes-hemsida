@@ -44,12 +44,17 @@ export async function POST(request: NextRequest) {
     return Response.json({ error: "Ogiltig statistik-händelse." }, { status: 400 });
   }
 
-  const stats = await recordAnalyticsEvent({
-    name: payload.name,
-    path: cleanText(payload.path, request.nextUrl.pathname),
-    source: cleanText(payload.source, payload.name),
-    createdAt: new Date().toISOString(),
-  });
+  try {
+    await recordAnalyticsEvent({
+      name: payload.name,
+      path: cleanText(payload.path, request.nextUrl.pathname),
+      source: cleanText(payload.source, payload.name),
+      createdAt: new Date().toISOString(),
+    });
 
-  return Response.json({ ok: true, totals: stats.totals });
+    return Response.json({ ok: true });
+  } catch (error) {
+    console.error("Kunde inte spara statistik:", error);
+    return Response.json({ error: "Statistiken kunde inte sparas." }, { status: 503 });
+  }
 }

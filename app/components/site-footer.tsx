@@ -74,7 +74,7 @@ export function SiteFooter() {
             </a>
 
             <a
-              href="https://www.instagram.com/miss_csweet/"
+              href="https://www.instagram.com/healthstuenes/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Besök Health Stuenes på Instagram"

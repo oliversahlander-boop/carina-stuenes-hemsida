@@ -10,7 +10,7 @@ export function PageViewTracker() {
 
     const payload = JSON.stringify({
       name: "page_view",
-      source: "page_view",
+      source: window.location.pathname,
       path: window.location.pathname,
     });
 
