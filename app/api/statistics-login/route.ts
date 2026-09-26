@@ -7,9 +7,17 @@ export async function POST(request: Request) {
   const payload = (await request.json().catch(() => null)) as { pin?: unknown } | null;
   const pin = typeof payload?.pin === "string" ? payload.pin : "";
 
-  if (!process.env.STATISTICS_PIN || !process.env.STATISTICS_SESSION_SECRET) {
+  const missingVariables = [
+    !process.env.STATISTICS_PIN && "STATISTICS_PIN",
+    !process.env.STATISTICS_SESSION_SECRET && "STATISTICS_SESSION_SECRET",
+  ].filter(Boolean);
+
+  if (missingVariables.length > 0) {
     return Response.json(
-      { ok: false, error: "Statistikinloggningen är inte konfigurerad." },
+      {
+        ok: false,
+        error: `Statistikinloggningen saknar: ${missingVariables.join(", ")}.`,
+      },
       { status: 503 },
     );
   }
