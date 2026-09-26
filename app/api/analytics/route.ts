@@ -73,6 +73,12 @@ export async function POST(request: NextRequest) {
     return Response.json({ ok: true });
   } catch (error) {
     console.error("Kunde inte spara statistik:", error);
-    return Response.json({ error: "Statistiken kunde inte sparas." }, { status: 503 });
+    return Response.json(
+      {
+        error: "Statistiken kunde inte sparas.",
+        reason: error instanceof Error ? error.message : "Okänt serverfel.",
+      },
+      { status: 503 },
+    );
   }
 }
