@@ -54,6 +54,11 @@ function normalizeStats(value: unknown): AnalyticsStats {
 function getSupabaseConfig() {
   const url = process.env.SUPABASE_URL?.replace(/\/$/, "");
   const secretKey = process.env.SUPABASE_SECRET_KEY;
+
+  if (process.env.NODE_ENV === "production" && (!url || !secretKey)) {
+    throw new Error("SUPABASE_URL eller SUPABASE_SECRET_KEY saknas.");
+  }
+
   return url && secretKey ? { url, secretKey } : null;
 }
 

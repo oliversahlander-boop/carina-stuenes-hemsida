@@ -1,17 +1,20 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export function PageViewTracker() {
+  const pathname = usePathname();
+
   useEffect(() => {
-    if (window.location.pathname.startsWith("/statistik")) {
+    if (pathname.startsWith("/statistik")) {
       return;
     }
 
     const payload = JSON.stringify({
       name: "page_view",
-      source: window.location.pathname,
-      path: window.location.pathname,
+      source: pathname,
+      path: pathname,
     });
 
     if (navigator.sendBeacon) {
@@ -25,7 +28,7 @@ export function PageViewTracker() {
       body: payload,
       keepalive: true,
     }).catch(() => undefined);
-  }, []);
+  }, [pathname]);
 
   return null;
 }
